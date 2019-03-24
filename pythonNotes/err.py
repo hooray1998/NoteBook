@@ -1,13 +1,14 @@
 # -*- coding:utf-8 -*-
+'''
+使用pdb调试
+'''
 import pdb
-
 
 def f(s):
     n = int(s)
     pdb.set_trace()  # 运行到这里会自动暂停
     result = 10 / n
     return result
-
 
 s = '0'
 n = int(s)
