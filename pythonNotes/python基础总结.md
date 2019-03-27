@@ -1,5 +1,4 @@
 # Python 面试准备fasd
-# afsdfasd
 
 1. 使用join(list)，拼接字符串
 2. 使用解压赋值取出list中的连续的一串
@@ -39,30 +38,31 @@ print("this number is ", r)
 9. 装饰器
 
 >装饰器是一个函数，接收一个函数返回另一个函数。用法如下：
+
 ```python
-import time
 from functools import wraps
+import time
 
-def timethis(func):
-    '''
+def recordtime(func):
+	"""
     Decorator that reports the execution time.
-    '''
-    @wraps(func)
-    def wrapper(*args, **kwargs):
-        start = time.time()
-        result = func(*args, **kwargs)
-        end = time.time()
-        print(func.__name__, end-start)
-        return result
-    return wrapper
+	"""
+	@wraps(func)
+	def www(*args, **kwargs):
+		start = time.time()
+		re = func(*args, **kwargs)
+		end = time.time()
+		print(func.__name__, end - start)
+		return re
+	return www
 
-@timethis
-def countdown(n):
-     while n > 0:
-         n -= 1
+@recordtime
+def foo(n):
+	sum = 1
+	for i in range(1, n):
+		sum *= i
 
->>> countdown(100000)
-countdown 0.008917808532714844
->>> countdown(10000000)
-countdown 0.87188299392912
+foo(1000)
+	
+
 ```
