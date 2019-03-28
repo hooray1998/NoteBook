@@ -1,0 +1,821 @@
+
+<!DOCTYPE HTML>
+<html lang="zh_hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>PLR车牌识别 · Webpack 中文指南</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Tcp与Udp的区别.html" />
+    
+    
+    <link rel="prev" href="MouseGestures_手势识别.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    常用算法
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../algorithm/动态规划.html">
+            
+                <a href="../algorithm/动态规划.html">
+            
+                    
+                    动态规划
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../algorithm/分治算法.html">
+            
+                <a href="../algorithm/分治算法.html">
+            
+                    
+                    分治算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../algorithm/归纳法.html">
+            
+                <a href="../algorithm/归纳法.html">
+            
+                    
+                    归纳法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../algorithm/回溯法.html">
+            
+                <a href="../algorithm/回溯法.html">
+            
+                    
+                    回溯法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../algorithm/数据结构.html">
+            
+                <a href="../algorithm/数据结构.html">
+            
+                    
+                    数据结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../algorithm/贪心算法.html">
+            
+                <a href="../algorithm/贪心算法.html">
+            
+                    
+                    贪心算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    算法总结
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../algorithm/summary_NP-hard.html">
+            
+                <a href="../algorithm/summary_NP-hard.html">
+            
+                    
+                    summary-NP-hard
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../algorithm/summary_二叉树遍历.html">
+            
+                <a href="../algorithm/summary_二叉树遍历.html">
+            
+                    
+                    summary二叉树遍历
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../algorithm/summary_排列组合.html">
+            
+                <a href="../algorithm/summary_排列组合.html">
+            
+                    
+                    summary排列组合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../algorithm/summary_排序算法.html">
+            
+                <a href="../algorithm/summary_排序算法.html">
+            
+                    
+                    summary排序算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../algorithm/summary_树总结.html">
+            
+                <a href="../algorithm/summary_树总结.html">
+            
+                    
+                    summary树总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../algorithm/summary_算法的优化.html">
+            
+                <a href="../algorithm/summary_算法的优化.html">
+            
+                    
+                    summary算法的优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../algorithm/summary_异或的应用.html">
+            
+                <a href="../algorithm/summary_异或的应用.html">
+            
+                    
+                    summary异或的应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../algorithm/summary_找零钱问题.html">
+            
+                <a href="../algorithm/summary_找零钱问题.html">
+            
+                    
+                    summary找零钱问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    C++基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../cppNotes/Cpp多态.html">
+            
+                <a href="../cppNotes/Cpp多态.html">
+            
+                    
+                    Cpp多态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../cppNotes/csp备考.3.14.pdf">
+            
+                <span>
+            
+                    
+                    csp备考
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../cppNotes/c++基础总结.html">
+            
+                <a href="../cppNotes/c++基础总结.html">
+            
+                    
+                    c++基础总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    机器学习
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../machineLearning/kNN.html">
+            
+                <a href="../machineLearning/kNN.html">
+            
+                    
+                    kNN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../machineLearning/L1-L2正则化.html">
+            
+                <a href="../machineLearning/L1-L2正则化.html">
+            
+                    
+                    L1-L2正则化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../machineLearning/">
+            
+                <a href="../machineLearning/">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../machineLearning/决策树.html">
+            
+                <a href="../machineLearning/决策树.html">
+            
+                    
+                    决策树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../machineLearning/随机森林RF.html">
+            
+                <a href="../machineLearning/随机森林RF.html">
+            
+                    
+                    随机森林RF
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    项目总结
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="BigData_大数据分析.html">
+            
+                <a href="BigData_大数据分析.html">
+            
+                    
+                    BigData大数据分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="facepp_人脸识别.html">
+            
+                <a href="facepp_人脸识别.html">
+            
+                    
+                    facepp人脸识别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="MouseGestures_手势识别.html">
+            
+                <a href="MouseGestures_手势识别.html">
+            
+                    
+                    MouseGestures手势识别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6.4" data-path="PLR_车牌识别.html">
+            
+                <a href="PLR_车牌识别.html">
+            
+                    
+                    PLR车牌识别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="Tcp与Udp的区别.html">
+            
+                <a href="Tcp与Udp的区别.html">
+            
+                    
+                    Tcp与Udp的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="Todo_代办事项管理.html">
+            
+                <a href="Todo_代办事项管理.html">
+            
+                    
+                    Todo代办事项管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="uTim_聊天软件.html">
+            
+                <a href="uTim_聊天软件.html">
+            
+                    
+                    uTim聊天软件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="进程和线程的区别.html">
+            
+                <a href="进程和线程的区别.html">
+            
+                    
+                    进程和线程的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="项目介绍.html">
+            
+                <a href="项目介绍.html">
+            
+                    
+                    项目介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../pythonNotes/python基础总结.html">
+            
+                <a href="../pythonNotes/python基础总结.html">
+            
+                    
+                    python基础总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >PLR车牌识别</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x8F66;&#x724C;&#x8BC6;&#x522B;">&#x8F66;&#x724C;&#x8BC6;&#x522B;</h2>
+<ul>
+<li>&#x4ECE;&#x5BFC;&#x5E08;&#x90A3;&#x62FF;&#x5230;&#x6570;&#x4E07;&#x5F20;&#x76D1;&#x63A7;&#x6570;&#x636E;</li>
+<li>&#x5206;&#x6790;&#x73B0;&#x6709;&#x7684;&#x5DE5;&#x5177;&#x7684;&#x5C40;&#x9650;&#x6027; &#x2605;<ul>
+<li>&#x4E0D;&#x65B9;&#x4FBF;&#x6807;&#x8BB0;&#x8F66;&#x724C;&#x7684;&#x591A;&#x4E2A;&#x989C;&#x8272;</li>
+<li>&#x4E0D;&#x80FD;&#x5BF9;&#x6807;&#x6CE8;&#x540E;&#x7684;&#x76D1;&#x63A7;&#x56FE;&#x7247;&#x64A4;&#x9500;&#x64CD;&#x4F5C;</li>
+<li>&#x5904;&#x7406;&#x540E;&#x7684;&#x6587;&#x4EF6;&#x547D;&#x540D;&#x4E0D;&#x89C4;&#x8303;</li>
+<li>&#x65E0;&#x6CD5;&#x5C06;&#x591A;&#x4EBA;&#x534F;&#x4F5C;&#x4EA7;&#x751F;&#x7684;&#x6570;&#x636E;&#x7EDF;&#x4E00;&#x6574;&#x7406;</li>
+<li>&#x65E0;&#x6CD5;&#x5BF9;&#x7279;&#x6B8A;&#x7684;&#x56FE;&#x7247;&#x7279;&#x6B8A;&#x5904;&#x7406;</li>
+</ul>
+</li>
+<li>&#x6211;&#x51B3;&#x5B9A;&#x81EA;&#x5DF1;&#x52A8;&#x624B;&#x5199;&#x4E00;&#x4E2A;&#x5DE5;&#x5177; &#x2605;<ul>
+<li>&#x591C;&#x95F4;&#x6A21;&#x5F0F;</li>
+<li>&#x5DE5;&#x4F5C;&#x91CF;&#x7EDF;&#x8BA1;&#xFF0C;&#x8FDB;&#x5EA6;&#x4EE5;&#x53CA;&#x6807;&#x6CE8;&#x901F;&#x5EA6;&#x7EDF;&#x8BA1;</li>
+<li>&#x5BF9;&#x6807;&#x6CE8;&#x540E;&#x7684;&#x8F66;&#x724C;&#x663E;&#x793A;&#x6548;&#x679C;&#x505A;&#x4E86;&#x4F18;&#x5316;</li>
+<li>&#x589E;&#x52A0;&#x68C0;&#x67E5;&#x6A21;&#x5F0F;&#x7B49;&#x7B49;</li>
+</ul>
+</li>
+<li><p>&#x63A5;&#x7740;&#x6211;&#x4EEC;&#x53C8;&#x63A5;&#x5230;&#x4EFB;&#x52A1;&#xFF0C;&#x9700;&#x8981;&#x5BF9;&#x6BCF;&#x4E2A;&#x8F66;&#x724C;&#x7684;&#x6240;&#x6709;&#x7684;&#x5B57;&#x7B26;&#x8FDB;&#x884C;&#x6807;&#x6CE8; &#x2605;</p>
+<ul>
+<li>&#x6211;&#x53C8;&#x5206;&#x6790;&#x73B0;&#x6709;&#x7684;&#x5DE5;&#x5177;<ul>
+<li>&#x6BCF;&#x4E00;&#x4E2A;&#x8F66;&#x724C;&#x7684;&#x6240;&#x6709;&#x5B57;&#x7B26;&#x90FD;&#x8981;&#x5206;&#x522B;&#x6846;&#x9009;&#xFF0C;&#x6548;&#x7387;&#x6781;&#x6162;</li>
+</ul>
+</li>
+<li>&#x63A5;&#x7740;&#x6211;&#x53C8;&#x60F3;&#x51FA;&#x4E86;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x65B9;&#x6CD5;<ul>
+<li>&#x7531;&#x4E8E;&#x6BCF;&#x4E2A;&#x8F66;&#x724C;&#x6240;&#x6709;&#x7684;&#x5B57;&#x7B26;&#x4F4D;&#x7F6E;&#x90FD;&#x662F;&#x7B49;&#x6BD4;&#x4F8B;&#x7684;</li>
+<li>&#x5F53;&#x4F60;&#x6807;&#x6CE8;&#x4EFB;&#x610F;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x5176;&#x4ED6;&#x5B57;&#x7B26;&#x90FD;&#x5E94;&#x8BE5;&#x81EA;&#x52A8;&#x6846;&#x9009;</li>
+<li>&#x6240;&#x4EE5;&#x6211;&#x6839;&#x636E;&#x8FD9;&#x4E2A;&#x7279;&#x6027;&#x53C8;&#x5F00;&#x53D1;&#x4E86;&#x4E00;&#x5957;&#x5FEB;&#x901F;&#x6807;&#x6CE8;&#x8F66;&#x724C;&#x5B57;&#x7B26;&#x7684;&#x5DE5;&#x5177;<ul>
+<li>&#x53E6;&#x5916;&#xFF0C;&#x6BCF;&#x4E2A;&#x4EBA;&#x5206;&#x7684;&#x7684;&#x6570;&#x636E;&#x4E2D;&#x5305;&#x542B;&#x7684;&#x7701;&#x4EFD;&#x90FD;&#x662F;&#x6BD4;&#x8F83;&#x5C11;&#x7684;</li>
+<li>&#x6BD4;&#x5982;&#x5927;&#x90E8;&#x5206;&#x90FD;&#x662F;&#x6C5F;&#x6D59;&#x6CAA;</li>
+<li>&#x8FD9;&#x6837;&#x6BCF;&#x4E2A;&#x4EBA;&#x90FD;&#x53EF;&#x4EE5;&#x81EA;&#x5B9A;&#x4E49;&#xFF0C;<ul>
+<li>&#x6BD4;&#x5982;&#x6572;&#x51FB;s&#x5C31;&#x81EA;&#x52A8;&#x6807;&#x6CE8;&#x82CF;&#xFF0C; </li>
+<li>&#x6572;&#x51FB;z&#x5C31;&#x662F;&#x6D59;</li>
+<li>&#x53C8;&#x6781;&#x5927;&#x7684;&#x63D0;&#x9AD8;&#x4E86;&#x6211;&#x4EEC;&#x6807;&#x6CE8;&#x7684;&#x901F;&#x5EA6;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>&#x5728;&#x6807;&#x6CE8;&#x597D;&#x6240;&#x6709;&#x7684;&#x8F66;&#x724C;&#x540E;&#xFF0C;&#x6211;&#x53C8;&#x6839;&#x636E;&#x5B66;&#x957F;&#x7684;&#x5EFA;&#x8BAE;&#x9009;&#x62E9;&#x4E86;yolov3&#x76EE;&#x6807;&#x68C0;&#x6D4B;&#x7B97;&#x6CD5;</strong> &#x2605;</p>
+<ul>
+<li>&#x5230;&#x76EE;&#x524D;&#x4E3A;&#x6B62;&#xFF0C;&#x901F;&#x5EA6;&#x548C;&#x7CBE;&#x5EA6;&#x6700;&#x5747;&#x8861;&#x7684;&#x76EE;&#x6807;&#x68C0;&#x6D4B;&#x7F51;&#x7EDC;<ul>
+<li>YOLO&#x6CA1;&#x6709;&#x9009;&#x62E9;&#x6ED1;&#x7A97;&#x6216;&#x63D0;&#x53D6;proposal&#x7684;&#x65B9;&#x5F0F;&#x8BAD;&#x7EC3;&#x7F51;&#x7EDC;&#xFF0C;&#x800C;&#x662F;&#x76F4;&#x63A5;&#x9009;&#x7528;&#x6574;&#x56FE;&#x8BAD;&#x7EC3;&#x6A21;&#x578B;&#x3002;&#x8FD9;&#x6837;&#x505A;&#x7684;&#x597D;&#x5904;&#x5728;&#x4E8E;&#x53EF;&#x4EE5;&#x66F4;&#x597D;&#x7684;&#x533A;&#x5206;&#x76EE;&#x6807;&#x548C;&#x80CC;&#x666F;&#x533A;&#x57DF;&#xFF0C;&#x76F8;&#x6BD4;&#x4E4B;&#x4E0B;&#xFF0C;&#x91C7;&#x7528;proposal&#x8BAD;&#x7EC3;&#x65B9;&#x5F0F;&#x7684;Fast-R-CNN&#x5E38;&#x5E38;&#x628A;&#x80CC;&#x666F;&#x533A;&#x57DF;&#x8BEF;&#x68C0;&#x4E3A;&#x7279;&#x5B9A;&#x76EE;&#x6807;&#x3002; </li>
+<li>&#x591A;&#x6807;&#x7B7E;&#x5206;&#x7C7B;&#x9884;&#x6D4B;</li>
+<li>&#x91C7;&#x7528;&#x591A;&#x4E2A;scale&#x878D;&#x5408;&#x7684;&#x65B9;&#x5F0F;&#x505A;&#x9884;&#x6D4B;</li>
+<li>&#x8DE8;&#x5C3A;&#x5EA6;&#x9884;&#x6D4B;</li>
+<li>&#x901A;&#x8FC7;&#x591A;&#x79CD;&#x5148;&#x8FDB;&#x65B9;&#x6CD5;&#x7684;&#x878D;&#x5408;&#xFF0C;&#x5C06;YOLO&#x7CFB;&#x5217;&#x7684;&#x77ED;&#x677F;&#xFF08;&#x901F;&#x5EA6;&#x5F88;&#x5FEB;&#xFF0C;&#x4E0D;&#x64C5;&#x957F;&#x68C0;&#x6D4B;&#x5C0F;&#x7269;&#x4F53;&#x7B49;&#xFF09;&#x5168;&#x90E8;&#x8865;&#x9F50;&#x3002;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>&#x6839;&#x636E;&#x6587;&#x6863;&#x8BAD;&#x7EC3;&#x597D;&#x6A21;&#x578B;&#x4E4B;&#x540E;&#xFF0C;&#x4E3A;&#x4E86;&#x80FD;&#x5B9E;&#x73B0;&#x66F4;&#x597D;&#x7684;&#x56FE;&#x7247;&#x8BC6;&#x522B;&#x4EA4;&#x4E92;&#x6548;&#x679C;<ul>
+<li>&#x6211;&#x53C8;&#x5F00;&#x53D1;&#x4E86;&#x4E00;&#x4E2A;&#x7A0B;&#x5E8F;&#xFF0C;&#x53EF;&#x4EE5;&#x81EA;&#x52A8;&#x4E0D;&#x95F4;&#x65AD;&#x8BC6;&#x522B;&#x5E76;&#x76F4;&#x89C2;&#x5C55;&#x793A;&#x8BC6;&#x522B;&#x6548;&#x679C;</li>
+<li>&#x53EF;&#x5FEB;&#x6377;&#x9009;&#x4E2D;&#x67D0;&#x4E2A;&#x8F66;&#x724C;&#x8FDB;&#x884C;&#x8BC6;&#x522B;</li>
+<li>&#x4E5F;&#x53EF;&#x901A;&#x8FC7;&#x62D6;&#x62FD;&#x56FE;&#x7247;&#x5230;&#x7A0B;&#x5E8F;&#x4E2D;&#x8FDB;&#x884C;&#x8BC6;&#x522B;&#x3002;</li>
+</ul>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="MouseGestures_手势识别.html" class="navigation navigation-prev " aria-label="Previous page: MouseGestures手势识别">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Tcp与Udp的区别.html" class="navigation navigation-next " aria-label="Next page: Tcp与Udp的区别">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"PLR车牌识别","level":"1.6.4","depth":2,"next":{"title":"Tcp与Udp的区别","level":"1.6.5","depth":2,"path":"projectSummary/Tcp与Udp的区别.md","ref":"projectSummary/Tcp与Udp的区别.md","articles":[]},"previous":{"title":"MouseGestures手势识别","level":"1.6.3","depth":2,"path":"projectSummary/MouseGestures_手势识别.md","ref":"projectSummary/MouseGestures_手势识别.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","github","prism","-highlight","splitter","-search","search-pro","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/hooray1998"},"livereload":{},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Webpack 中文指南","language":"zh_hans","gitbook":"*","description":"Webpack 是当下最热门的前端资源模块化管理和打包工具，本书大部分内容翻译自 Webpack 官网。"},"file":{"path":"projectSummary/PLR_车牌识别.md","mtime":"2019-03-26T03:41:22.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-28T12:09:05.061Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
