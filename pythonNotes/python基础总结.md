@@ -1,5 +1,6 @@
 # Python 面试准备fasd
 
+
 1. 使用join(list)，拼接字符串
 2. 使用解压赋值取出list中的连续的一串
 3. 什么是元类: 
@@ -65,4 +66,18 @@ def foo(n):
 foo(1000)
 	
 
+
+```
+
+10. 输入一个列表
+
+```python
+>>> x=input()
+1 2 3 4
+>>> xlist=x.split(" ")
+>>> print(xlist)
+['1', '2', '3', '4']
+>>> xlist = [int(xlist[i]) for i in range(len(xlist))]
+>>> print(xlist)
+[1, 2, 3, 4]
 ```
