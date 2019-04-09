@@ -32,8 +32,6 @@ import random
 list = [1, 2, 3, 4]
 random.shuffle(list)
 print(list)
-r = input("please input a number.")
-print("this number is ", r)
 ```
 
 9. 装饰器
