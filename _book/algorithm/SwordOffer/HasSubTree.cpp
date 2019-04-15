@@ -17,7 +17,6 @@ struct TreeNode {
 };
 
 class Solution {
-	复杂
 public:
 	bool equal(TreeNode* pRoot1, TreeNode* pRoot2)
 	{
