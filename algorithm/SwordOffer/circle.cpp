@@ -67,7 +67,7 @@ public:
 };
 int main(){
 	Solution s;
-	s.LastRemaining_Solution2(5,3);
+	cout<<s.LastRemaining_Solution(7,2);
 
 	return 0;
 }

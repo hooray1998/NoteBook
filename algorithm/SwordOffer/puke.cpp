@@ -40,7 +40,6 @@ public:
         }
 		if(sum<=zero)
 		{
-
 			return true;
 		}
 		else
@@ -55,7 +54,7 @@ int main(){
 	vector<int> list={5,2,3,6,0};
 
 	Solution s;
-	s.IsContinuous(list);
+	cout<<s.IsContinuous(list);
 
 	return 0;
 }

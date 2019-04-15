@@ -14,18 +14,26 @@
 
 ### 全排列
 ```python
-'''输出abcd的全排列,归纳法'''
+'''
+输出abcd的全排列,归纳法
+输出不是字典序，需要sort
+'''
 def p(m):
     if m==n:
-        print(l)
+        res.append(list(l))
     else:
         for i in range(m,n):
             l[i],l[m] = l[m],l[i]
             p(m+1)
             l[i],l[m] = l[m],l[i]
 l=['a','b','c','d']
+res = []
 n=4
 p(0)
+res = sorted(res)
+for i in res:
+    print(i)
+
 ```
 
 ```python
@@ -58,6 +66,72 @@ Try(1)
 print("Count:",Count)
 ```
 
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+class Solution {
+private:
+	string s;
+	int len;
+	vector<string> res;
+public:
+    vector<string> Permutation(string str) {
+		s = str;
+		len = str.size();
+		Try(0);
+		//Try2();
+		return res;
+    }
+	void Try(int d){
+		if(d==len-1)
+			res.push_back(s);
+		else{
+			Try(d+1);//原始的也要输出
+			for(int i=d+1;i<len;i++)
+			{
+				if(s[i]!=s[d])//如果和开头相同则不再交换
+				{
+					swap(s[d],s[i]);
+					Try(d+1);
+					swap(s[d],s[i]);
+				}
+			}
+		}
+	}
+	void Try2(){//不用排序算法输出字典序, 还没解决重复的问题
+		char *str = new char(strlen(s.c_str()));
+		strcpy(str, s.c_str());
+		sort(str,str+len);
+
+		int i, j;
+		while(true)
+		{
+			i = j = len-1;
+			res.push_back(string(str));
+
+			--j;
+			while(j>=0&&str[j]>=str[j+1]) --j;
+			if(j<0) return ;
+
+			while(i>j&&str[i]<=str[j]) i--;//肯定有比j大的
+			swap(str[i],str[j]);
+
+			//交换j后面的
+			for(int e = len-1,s = j+1;s<e;s++,e--)
+				swap(str[s],str[e]);
+		}
+	}
+};
+int main(){
+	string str="fabc";
+	Solution s;
+	vector<string>res = s.Permutation(str);
+	for(int i=0;i<res.size();i++)
+		cout<<res[i]<<endl;
+
+	return 0;
+}
+```
 
 # 组合
 

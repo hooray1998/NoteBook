@@ -7,6 +7,35 @@
 
 #include<bits/stdc++.h>
 using namespace std;
+class Solution_better {
+public:
+    int NumberOf1Between1AndN_Solution(int n)
+    {
+        int num = n;
+        int bit = 1;
+        int pre = 0;
+        int post = 0;
+        int ret = 0;
+        int tar = 0;
+        int i = 0;
+        while (num)
+            {
+            tar = num % 10;
+            pre = num / 10;
+            if (tar == 0)
+                ret += pre * bit;
+            else if (tar == 1)
+                ret += post + 1 + pre * bit;
+            else
+                ret += (pre + 1) * bit;
+            bit *= 10;
+            post += tar * pow(10, i);
+            num = pre;
+            i++;
+        }
+        return ret;
+    }
+};
 class Solution {
 public:
     int NumberOf1Between1AndN_Solution(int n)
@@ -66,7 +95,6 @@ public:
 		cout<<"sum: "<<sum<<endl;
     }
 };
-
 int main(){
 
 	Solution s;

@@ -9,7 +9,7 @@
 using namespace std;
 class Solution {
 public:
-    bool IsPopOrder(vector<int> pushV,vector<int> popV) {
+    bool IsPopOrder2(vector<int> pushV,vector<int> popV) {
 		int len = pushV.size();
 		if(!len)
 			return true;
@@ -53,11 +53,30 @@ public:
 		return true;
         
     }
+    bool IsPopOrder(vector<int> pushV,vector<int> popV) {
+		int len = pushV.size();
+		stack<int> s;
+
+		int i=0;
+		for(int j=0;j<len;j++)
+		{
+			while(s.empty()||s.top()!=popV[j])
+			{
+				if(i!=len)
+					s.push(pushV[i++]);
+				else
+					return false;
+			}
+			s.pop();
+		}
+		return true;
+
+	}
 };
 int main(){
 	Solution s;
 	vector<int> pushv={1,2,3,4,5};
-	vector<int> popv={2,1,5,4,3};
+	vector<int> popv={3,5,4,2,1};
 	if(s.IsPopOrder(pushv,popv))
 		cout<<"ok";
 	else
