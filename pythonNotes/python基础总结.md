@@ -1,5 +1,8 @@
 # Python 面试准备fasd
+[python面试](https://www.django.cn/article/show-19.html)
 
+__str__是对象字符串的改变
+可以将对象输出成字符串
 
 1. 使用join(list)，拼接字符串
 2. 使用解压赋值取出list中的连续的一串
