@@ -1,7 +1,13 @@
+_book/
+node_modules
+SUMMARY.md
+
 .temp
 csp备考.3.14.pdf
 algorithm/AddOil.py
 项目介绍/*
 面试记录/*
 自我介绍.md
-_book/
+操作系统/jobs
+操作系统/tt_jobs
+
