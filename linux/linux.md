@@ -1,5 +1,28 @@
 # 常用Linux命令
 
+[目录](.)
+1. chmod
+1. chown
+1. df
+1. du
+1. ln
+1. date命令
+1. cal命令
+1. 其他命令
+1. 后台任务与后台运行
+1. 一、&
+`watch  -n 10 sh  test.sh  &  	每10s在后台执行一次test.sh脚本`
+1. 二、ctrl + z
+1. 三、jobs
+1. 四、fg
+1. 五、bg
+1. 六、kill
+1. 七、nohup
+`ps -aux | grep "test.sh"  	a:显示所有程序 u:以用户为主的格式来显示 x:显示所有程序，不以终端机来区分`
+1. 常用linux命令
+	1. 查找
+
+
 
 ### chmod
 
