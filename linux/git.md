@@ -1,54 +1,62 @@
-# Git用法整理
+# Git用法总结
 
 
 ### 基本用法
 
-初始化一个git仓库
-`git init`
-显示git提交日志
-git log				 # catch commit log
-显示当前git仓库状态
-git status
-显示工作区和暂存区或最近的一次提交的不同
-git diff [filename]
-记录每一次的版本变动
-git reflog
 
-# 丢弃工作区的修改,恢复到暂存区或最近的一次提交
+命令|说明
+:-|:-
+`git init`|初始化一个git仓库
+`git status`|显示当前git仓库状态
+`git add <filename>`|增加文件到暂存区
+`git add --all`|增加所有文件到暂存区
+`git commit -m "版本说明"`|提交一次版本记录
+`git log`|显示git提交日志
+`git diff [filename] `|显示工作区和暂存区或最近的一次提交的不同
+`git reflog `|记录每一次的版本变动
+
+### 丢弃工作区的修改,恢复到暂存区或最近的一次提交
+
+```sh
 git checkout -- *
 git checkout -- <filename> 
+```
 
-
-# 丢弃工作区和暂存区的所有改动
+### 丢弃工作区和暂存区的所有改动
+>只要是版本变动都会**清空工作区和暂存区的内容**
+```sh
 git reset --hard HEAD # 重置到最新的一次提交, 丢弃未提交的所有内容.
 git reset --hard HEAD^  # 再上一个
 git reset --hard HEAD^^
 git reset --hard versionNumber # 只输入前几位即可
-
-`只要是版本变动都会清空工作区和暂存区的内容`
-
+```
 
 ### 推送到远程仓库
 
-创建ssh秘钥
+```sh
+# (本地)创建ssh秘钥
 ssh-keygen -t rsa -C "hooray1998@foxmail.com"
-增加远程仓库，起名origin
-git remote add origin git@github.com:hooray1998/linuxConfig.git
-初次push需要加-u参数
-git push -u origin master
-后续push不需要
-git push origin master
+# (远程)添加本机的公钥
+# (远程)然后新建一个存储库
 
+# (本地)增加远程仓库，起名origin
+git remote add origin git@github.com:hooray1998/linuxConfig.git
+# (本地)初次push需要加-u参数
+git push -u origin master
+# 后续push不需要
+git push origin master
+# 拉取远程分支
+git pull origin master
+```
 
 ### 克隆远程仓库
-git clone git@github.com:hooray1998/QtCoding.git
-git clone git@github.com:GoldenPlan666/loveyue.git
-
+`git clone git@github.com:hooray1998/QtCoding.git`
 
 ### 使用分支
 
+```sh
 查看分支
-git branch 
+git branch
 创建分支
 git branch <name>     # make this branch
 git branch -d <name>   # del this branch
@@ -58,48 +66,65 @@ git checkout <name>  # change to this branch
 git checkout -b <name>  #  make and change to this branch
 删除分支
 git branch -D <name>  # delete a branch unmerged
+```
 
-快进(Fast-forward)合并到当前分支
-git merge <name>  # merge <name>branch to current branch
-快进(no-Fast-forward)合并到当前分支,方便看到合并的痕迹
-git merge  --no-ff -m "合并说明"  develop
+合并分支的两种方式
+1. 快进(Fast-forward)合并到当前分支
+	- `git merge <name>`
+2. no-Fast-forward合并到当前分支,方便看到合并的痕迹
+	- `git merge  --no-ff -m "合并说明"  develop`
 
 
-暂时储藏
+### 储藏当前的工作区
+
+>经常有这样的事情发生，当你正在进行项目中某一部分的工作，里面的东西处于一个**比较杂乱的状态**，而你想转到其他分支上进行一些工作。问题是，你**不想提交进行了一半的工作**，否则以后你无法回到这个工作点。解决这个问题的办法就是**git stash**命令。
+
+>“储藏”可以获取你工作目录的**中间状态**——也就是你**修改过的被追踪的文件和暂存的变更**——并将它保存到一个未完结变更的**堆栈**中，随时可以重新应用。
+
+```sh
+# 暂时储藏
 git stash    # save the current workspace uncomplish
-显示所有储藏
+# 显示所有储藏
 git stash list   # show the list of you stash before
-恢复最新的储藏
+# 恢复最新的储藏
 git stash apply [stash@{N}]
-恢复并删除
+# 恢复并删除
 git stash pop
-删除储藏
+# 删除储藏
 git stash drop [stash@{N}]
+```
 
+### 使用标签
 
-在当前版本上创建轻量级标签
-git tag <name>   #new a tag;  init version is HEAH
-在当前版本上创建带注释的标签
-git tag -a <tagname> -m  "balabala..." # 带注释的标签
-展示所有的标签
-git tag     # show the tag list
-删除标签
+```sh
+# 在当前版本上创建轻量级标签
+git tag <name>
+# 在当前版本上创建带注释的标签
+git tag -a <tagname> -m  "balabala..."
+# 展示所有的标签
+git tag
+# 删除标签
 git tag -d <tagname> # delete a tag
-展示某个标签的信息
+# 展示某个标签的信息
 git show <tagname>
-切换某一标签
-git checkout <tagname> # 切换到某一标签
-git push origin <tagname> # push a tag to remote
-git push origin --tags   # push all tags to remote
-git push origin :refs/tags/<tagname> # delete a tag in remote
-
-#ignore Some files
-https:#github.com/github/gitignore
-
-
+# 切换到某一标签
+git checkout <tagname>
+# push某个标签到远程
+git push origin <tagname>
+# push所有标签到远程
+git push origin --tags
+# 删除某个远程的标签
+git push origin :refs/tags/<tagname>
 ```
 
 
+### 使用.gitignore文件
+
+>.gitignore中的文件或目录会被忽略
+
+>如果之前未忽略，以后想忽略，可以通过git rm -r --cached <file/dir>
+
+gitignore文件可以参考 [github上的示例](https:#github.com/github/gitignore)
 
 ## 建议初始配置
 
@@ -114,7 +139,7 @@ eg: git unstage test.py   =>   git reset HEAD test.py
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 ```
 
-## bash中别名设置
+### bash中建议的别名设置
 
 ```sh
 alias gb='git branch'
@@ -128,6 +153,6 @@ alias ggpull='git pull origin "$(git_current_branch)"'
 alias glg='git lg' # 显示提交日志
 alias grlg='git reflog' # 显示版本变更操作记录
 alias ignore='vim .gitignore' # 编辑.gitignore文件
-cm(){ gaa; git commit -m "$*" }
+cm(){ gaa; git commit -m "$*" } # 快速提交
 gmerge_dev(){ git merge --no-ff -m "$*" develop }
 ```
