@@ -76,6 +76,7 @@
 
 ### csrf_token：这个标签用于跨站请求伪造保护
 
+`表格后面还有一个{% csrf_token %}的标签。csrf 全称是 Cross Site Request Forgery。这是Django提供的防止伪装提交请求的功能。POST 方法提交的表格，必须有此标签。`
 提交数据的时候就会做安全机制，当你点击提交的时候会出现一个forbbiddon
 的错误，就是用setting配置里的scrf做安全机制的，那么我们可以吧它给注释了
 或者在form表单下面添加一个{% csrf_token %}

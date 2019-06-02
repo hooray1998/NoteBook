@@ -1,6 +1,5 @@
 # Git用法总结
 
-
 ### 基本用法
 
 
@@ -50,7 +49,12 @@ git pull origin master
 ```
 
 ### 克隆远程仓库
-`git clone git@github.com:hooray1998/QtCoding.git`
+
+```sh
+git clone git@github.com:hooray1998/QtCoding.git
+#仅获取最新版和一个历史版本,即最后2个版本
+git clone git@github.com:hooray1998/QtCoding.git --depth=1
+```
 
 ### 使用分支
 
@@ -122,7 +126,7 @@ git push origin :refs/tags/<tagname>
 
 >.gitignore中的文件或目录会被忽略
 
->如果之前未忽略，以后想忽略，可以通过git rm -r --cached <file/dir>
+如果之前未忽略，以后想忽略，需要执行`git rm -r --cached <file/dir>`,否则可能会忽略失败
 
 gitignore文件可以参考 [github上的示例](https:#github.com/github/gitignore)
 
