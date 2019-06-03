@@ -1,3 +1,4 @@
+.hide_files
 _book/
 node_modules
 SUMMARY.md

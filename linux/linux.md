@@ -290,3 +290,10 @@ which executeable_name
 grep 命令（内容查找）
 grep -n open ~/Coding/pythonCoding/produce1.py 
 返回包含该字符串“ｏｐｅｎ”的行，　并显示行号
+
+
+### 查看端口情况
+
+netstat -anp|grep 8090
+最后一项是对应的进程和进程号
+kill -9  进程号
