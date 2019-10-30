@@ -1,0 +1,109 @@
+<h1 id="线程">线程</h1>
+<div class="sourceCode" id="cb1"><pre class="sourceCode c"><code class="sourceCode c"><a class="sourceLine" id="cb1-1" title="1"><span class="pp">#include </span><span class="im">&lt;pthread.h&gt;</span></a>
+<a class="sourceLine" id="cb1-2" title="2"></a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="dt">int</span> pthread_create(pthread_t *tid, pthread_attr_t *attr, <span class="dt">void</span> *(*start_routine)(<span class="dt">void</span> *), <span class="dt">void</span> *arg);</a></code></pre></div>
+<h4 id="功能">功能</h4>
+<ol type="1">
+<li>创建一个线程</li>
+<li>新线程从start_routine开始执行</li>
+<li>新线程的ID保存在tid指向的位置</li>
+<li>成功返回0</li>
+</ol>
+<h4 id="about-start_routine">about start_routine()</h4>
+<p>使用 <strong>指针函数（非函数指针）</strong>，用的时候取函数地址。</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode c"><code class="sourceCode c"><a class="sourceLine" id="cb2-1" title="1"><span class="dt">void</span> *foo(<span class="dt">void</span> *arg){</a>
+<a class="sourceLine" id="cb2-2" title="2">    <span class="co">//do something...</span></a>
+<a class="sourceLine" id="cb2-3" title="3">}</a>
+<a class="sourceLine" id="cb2-4" title="4">pthread_create(&amp;tid, NULL, &amp;foo, NULL);</a></code></pre></div>
+<blockquote>
+<p>补充：函数指针是指向函数的指针变量，即本质是一个指针变量。 void (<em>p)(void </em>arg); p=foo; /* 将func函数的首地址赋给指针p */</p>
+</blockquote>
+<h4 id="about-arg">about arg</h4>
+<div class="sourceCode" id="cb3"><pre class="sourceCode c"><code class="sourceCode c"><a class="sourceLine" id="cb3-1" title="1">==&gt;main()中：</a>
+<a class="sourceLine" id="cb3-2" title="2"><span class="dt">int</span> integer = <span class="dv">6</span>;</a>
+<a class="sourceLine" id="cb3-3" title="3"><span class="dt">int</span> arr[<span class="dv">3</span>] = {<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>};</a>
+<a class="sourceLine" id="cb3-4" title="4"><span class="dt">char</span> *string = <span class="st">&quot;hello world&quot;</span>;</a>
+<a class="sourceLine" id="cb3-5" title="5"><span class="dt">void</span> *arg = (<span class="dt">void</span> *)&amp;integer;</a>
+<a class="sourceLine" id="cb3-6" title="6"><span class="dt">void</span> *arr_arg = (<span class="dt">void</span> *)arr;</a>
+<a class="sourceLine" id="cb3-7" title="7"><span class="dt">void</span> *s_arg = (<span class="dt">void</span> *)string;</a>
+<a class="sourceLine" id="cb3-8" title="8">==&gt;传参：</a>
+<a class="sourceLine" id="cb3-9" title="9">arg, arr_arg, s_arg</a>
+<a class="sourceLine" id="cb3-10" title="10">==&gt;start_routine()中：</a>
+<a class="sourceLine" id="cb3-11" title="11"><span class="dt">int</span> a = *(<span class="dt">int</span> *)arg;</a>
+<a class="sourceLine" id="cb3-12" title="12"><span class="dt">int</span> *arr = (<span class="dt">int</span> *)arg;</a>
+<a class="sourceLine" id="cb3-13" title="13"><span class="dt">char</span> *s = arg;</a></code></pre></div>
+<h2 id="等待线程">等待线程</h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode c"><code class="sourceCode c"><a class="sourceLine" id="cb4-1" title="1"><span class="pp">#include </span><span class="im">&lt;pthread.h&gt;</span></a>
+<a class="sourceLine" id="cb4-2" title="2"></a>
+<a class="sourceLine" id="cb4-3" title="3"><span class="dt">int</span> pthread_join(pthread_t tid, <span class="dt">void</span> **result);</a></code></pre></div>
+<ol type="1">
+<li>等待线程结束</li>
+<li>result存取返回值（但start_routine函数还可以是void)</li>
+<li>成功返回0</li>
+</ol>
+<h4 id="线程返回值">线程返回值</h4>
+<div class="sourceCode" id="cb5"><pre class="sourceCode c"><code class="sourceCode c"><a class="sourceLine" id="cb5-1" title="1"><span class="co">//线程入口函数返回类型为void **类型的结果</span></a>
+<a class="sourceLine" id="cb5-2" title="2"><span class="dt">void</span> *start_routine(<span class="dt">void</span> *arg)</a>
+<a class="sourceLine" id="cb5-3" title="3">{</a>
+<a class="sourceLine" id="cb5-4" title="4">    <span class="dt">void</span> *result;</a>
+<a class="sourceLine" id="cb5-5" title="5">    ...</a>
+<a class="sourceLine" id="cb5-6" title="6">    <span class="cf">return</span> result;</a>
+<a class="sourceLine" id="cb5-7" title="7">}</a>
+<a class="sourceLine" id="cb5-8" title="8"><span class="co">//等待线程函数pthread_join获取线程的返回结果</span></a>
+<a class="sourceLine" id="cb5-9" title="9"><span class="dt">void</span> *result;</a>
+<a class="sourceLine" id="cb5-10" title="10">pthread_join(tid, &amp;result);</a></code></pre></div>
+<h4 id="初始化互斥量">初始化互斥量</h4>
+<div class="sourceCode" id="cb6"><pre class="sourceCode c"><code class="sourceCode c"><a class="sourceLine" id="cb6-1" title="1"><span class="pp">#include </span><span class="im">&lt;pthread.h&gt;</span></a>
+<a class="sourceLine" id="cb6-2" title="2"></a>
+<a class="sourceLine" id="cb6-3" title="3"><span class="dt">int</span> pthread_mutex_init(pthread_mutex_t *mutex, pthread_mutexattr_t *attr);<span class="co">//如果attr等于NULL，则使用缺省的属性进行初始化</span></a>
+<a class="sourceLine" id="cb6-4" title="4"><span class="dt">int</span> pthread_mutex_destroy(pthread_mutex_t *mutex); <span class="co">//销毁互斥量</span></a>
+<a class="sourceLine" id="cb6-5" title="5"><span class="dt">int</span> pthread_mutex_lock(pthread_mutex_t *mutex);<span class="co">// 加锁</span></a>
+<a class="sourceLine" id="cb6-6" title="6"><span class="dt">int</span> pthread_mutex_unlock(pthread_mutex_t *mutex);<span class="co">// 解锁</span></a></code></pre></div>
+<p>使用互斥量 1. 线程在访问global变量前先对互斥量加锁 2. 线程在访问global变量后再对互斥量解锁</p>
+<h2 id="条件变量">条件变量</h2>
+<p>原型</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode c"><code class="sourceCode c"><a class="sourceLine" id="cb7-1" title="1"><span class="pp">#include </span><span class="im">&lt;pthread.h&gt;</span></a>
+<a class="sourceLine" id="cb7-2" title="2"></a>
+<a class="sourceLine" id="cb7-3" title="3"><span class="co">// 初始化</span></a>
+<a class="sourceLine" id="cb7-4" title="4"><span class="dt">int</span> pthread_cond_init(pthread_cond_t *cond, pthread_condattr_t *attr);<span class="co">//初始化条件变量,如果attr等于NULL，则使用缺省的属性进行初始化</span></a>
+<a class="sourceLine" id="cb7-5" title="5"><span class="dt">int</span> pthread_cond_destroy(pthread_cond_t *cond);<span class="co">//释放条件变量</span></a></code></pre></div>
+<h4 id="等待">等待</h4>
+<div class="sourceCode" id="cb8"><pre class="sourceCode c"><code class="sourceCode c"><a class="sourceLine" id="cb8-1" title="1"><span class="dt">int</span> pthread_cond_wait(pthread_cond_t *cond, pthread_mutex_t *mutex);<span class="co">//阻塞当前线程的运行</span></a></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">参数</th>
+<th style="text-align: left;">解释</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">cond</td>
+<td style="text-align: left;">当前线程在条件变量上阻塞</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">mutex</td>
+<td style="text-align: left;">当前线程阻塞时所在的临界区</td>
+</tr>
+</tbody>
+</table>
+<h4 id="唤醒线程">唤醒线程</h4>
+<div class="sourceCode" id="cb9"><pre class="sourceCode c"><code class="sourceCode c"><a class="sourceLine" id="cb9-1" title="1"><span class="dt">int</span> pthread_cond_signal(pthread_cond_t *cond);<span class="co">//唤醒阻塞在条件变量上的一个线程</span></a>
+<a class="sourceLine" id="cb9-2" title="2"><span class="dt">int</span> pthread_cond_broadcast(pthread_cond_t *cond);<span class="co">//唤醒阻塞在条件变量上的所有线程</span></a></code></pre></div>
+<h3 id="条件变量初始化">条件变量初始化</h3>
+<div class="sourceCode" id="cb10"><pre class="sourceCode c"><code class="sourceCode c"><a class="sourceLine" id="cb10-1" title="1"><span class="pp">#include </span><span class="im">&lt;pthread.h&gt;</span></a>
+<a class="sourceLine" id="cb10-2" title="2"></a>
+<a class="sourceLine" id="cb10-3" title="3"><span class="dt">int</span> pthread_cond_init(pthread_cond_t *cond, pthread_condattr_t *attr);<span class="co">//初始化条件变量,如果attr等于NULL，则使用缺省的属性进行初始化</span></a>
+<a class="sourceLine" id="cb10-4" title="4"><span class="dt">int</span> pthread_cond_destroy(pthread_cond_t *cond);<span class="co">//释放条件变量</span></a>
+<a class="sourceLine" id="cb10-5" title="5"></a>
+<a class="sourceLine" id="cb10-6" title="6"><span class="co">//等待</span></a>
+<a class="sourceLine" id="cb10-7" title="7"><span class="dt">int</span> pthread_cond_wait(pthread_cond_t *cond, pthread_mutex_t *mutex);<span class="co">//阻塞当前线程的运行</span></a>
+<a class="sourceLine" id="cb10-8" title="8"><span class="co">/*</span></a>
+<a class="sourceLine" id="cb10-9" title="9"><span class="co">参数</span></a>
+<a class="sourceLine" id="cb10-10" title="10"><span class="co">&gt; cond  当前线程在条件变量上阻塞</span></a>
+<a class="sourceLine" id="cb10-11" title="11"><span class="co">&gt; mutex 当前线程阻塞时所在的临界区</span></a>
+<a class="sourceLine" id="cb10-12" title="12"><span class="co">*/</span></a>
+<a class="sourceLine" id="cb10-13" title="13"></a>
+<a class="sourceLine" id="cb10-14" title="14"><span class="co">//唤醒线程</span></a>
+<a class="sourceLine" id="cb10-15" title="15"><span class="dt">int</span> pthread_cond_signal(pthread_cond_t *cond);<span class="co">//唤醒阻塞在条件变量上的一个线程</span></a>
+<a class="sourceLine" id="cb10-16" title="16"><span class="dt">int</span> pthread_cond_broadcast(pthread_cond_t *cond);<span class="co">//唤醒阻塞在条件变量上的所有线程</span></a></code></pre></div>

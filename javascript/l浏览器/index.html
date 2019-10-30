@@ -1,0 +1,56 @@
+<head>
+	<script>
+
+		'use strict';
+var checkRegisterForm = function () {
+	// TODO:
+	var user = document.getElementById('username');
+	var pass1 = document.getElementById('password');
+	var pass2 = document.getElementById('password-2');
+	var reg = /^[A-Za-z0-9]{3,10}/;
+	if(!reg.test(user.value)) return false;
+	if(pass1.value.length<6||pass1.value.length>20) return false;
+	if(pass1.value != pass2.value) return false;
+	return true;
+}
+
+	</script>
+
+</head>
+<body>
+	<!--<input type="text" id="email">-->
+	<!--<label><input type="radio" name="weekday" id="monday" value="1"> Monday</label>-->
+	<!--<label><input type="radio" name="weekday" id="tuesday" value="2"> Tuesday</label>-->
+	<!--<select value="dfs">fsdf-->
+	<!--<select value="dsf">fsdffsd-->
+	<!--<input type="datetime-local" value="2015-07-01T02:03:04">-->
+
+	<!-- HTML结构 -->
+	<form id="test-register" action="#" target="_blank" onsubmit="return checkRegisterForm()">
+		<p id="test-error" style="color:red"></p>
+		<p>
+		用户名: <input type="text" id="username" name="username">
+		</p>
+		<p>
+		口令: <input type="password" id="password" name="password">
+		</p>
+		<p>
+		重复口令: <input type="password" id="password-2">
+		</p>
+		<p>
+		<button type="submit">提交</button> <button type="reset">重置</button>
+		</p>
+	</form>
+
+</body>
+
+<!--// TODO:-->
+<!--var user = document.getElementById('username');-->
+<!--var pass1 = document.getElementById('password');-->
+<!--var pass2 = document.getElementById('passowrd-2');-->
+<!--var reg = /[A-Za-z0-9]{3,10}/;-->
+<!--if(!reg.test(user.value)) return false;-->
+<!--if(pass1.value.length<6||pass1.value.length>20) return false;-->
+<!--if(pass1.value != pass2.value) return false;-->
+<!--return true;-->
+<!--}-->

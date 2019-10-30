@@ -19,5 +19,6 @@ print([s.upper() for s in names if len(s) > 3])
 bob = {'pay': 3000, 'job': 'dev', 'age': 42, 'name': 'bob smith'}
 sue = {'pay': 4000, 'job': 'hdw', 'age': 45, 'name': 'sue jones'}
 people = [bob, sue]
+print(people)
 
 [rec['age']+100 if rec['age'] >= 45 else rec['age'] for rec in people] # 注意for位置
