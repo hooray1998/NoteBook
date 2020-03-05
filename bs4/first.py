@@ -15,7 +15,7 @@ and they lived at the bottom of a well.</p>
 <p class="story">...</p>
 """
 
-soup = BeautifulSoup(html_doc, "lxml")
+soup = BeautifulSoup(html_doc, "html.parser")
 # print(soup.prettify())
 
 print(soup.title) # <title>The Dormouse's story</title>

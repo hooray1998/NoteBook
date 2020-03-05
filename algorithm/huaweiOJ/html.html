@@ -1,0 +1,2145 @@
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>题库 - 力扣 (LeetCode)</title>
+    <meta property="og:title" content="题库 - 力扣 (LeetCode)" />
+
+    
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover' name='viewport' />
+    
+    <meta name="description" content="备战技术面试？力扣提供海量技术面试资源，帮助你高效提升编程技能，轻松拿下世界 IT 名企 Dream Offer。" />
+    
+    <meta name="keywords" content="力扣, 力扣中国, leetcode, lingkou, leetcode中国, leetcode官网, 在线编程, lc, leetcode题解, leetcode答案, 面经, 算法, 面试, 求职, 招聘, 校招, 社招, 内推, 笔试, 面试题, 面试经验, 刷题, leetcode题库, 机器学习, 算法岗, 数据结构, 代码, 互联网, 编程, 开发, 程序员, 工程师, 白板面试, 码农, 程序猿, 领扣, 领扣网, 领扣网络, 领扣中国, BAT, BAT面试, OJ, online judge, coding interview, 技术面试, leetcode中文版, leetcodechina" />
+    
+    <meta property="og:image" content="https://static.leetcode-cn.com/cn-legacy-assets/images/LeetCode_Sharing.png" />
+    <meta property="og:description" content="备战技术面试？力扣提供海量技术面试资源，帮助你高效提升编程技能，轻松拿下世界 IT 名企 Dream Offer。" />
+
+    
+
+    <link rel="apple-touch-icon" sizes="57x57" href="https://static.leetcode-cn.com/cn-assets/icons/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="https://static.leetcode-cn.com/cn-assets/icons/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="https://static.leetcode-cn.com/cn-assets/icons/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="https://static.leetcode-cn.com/cn-assets/icons/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="https://static.leetcode-cn.com/cn-assets/icons/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="https://static.leetcode-cn.com/cn-assets/icons/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="https://static.leetcode-cn.com/cn-assets/icons/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="https://static.leetcode-cn.com/cn-assets/icons/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://static.leetcode-cn.com/cn-assets/icons/apple-touch-icon-180x180.png" />
+    <link rel="icon" type="image/png" href="https://static.leetcode-cn.com/cn-assets/icons/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="https://static.leetcode-cn.com/cn-assets/icons/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="https://static.leetcode-cn.com/cn-assets/icons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="https://static.leetcode-cn.com/cn-assets/icons/favicon-160x160.png" sizes="160x160" />
+    <link rel="icon" type="image/png" href="https://static.leetcode-cn.com/cn-assets/icons/favicon-192x192.png" sizes="192x192" />
+    <meta name="application-name" content="LeetCode"/>
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="msapplication-TileImage" content="https://static.leetcode-cn.com/cn-assets/icons/mstile-144x144.png" />
+
+    <script>
+// avoid running analysis codes for prerender
+if (!/prerender/i.test(navigator.userAgent)) {
+  // 百度统计
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?fa218a3ff7179639febdb15e372f411c";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+
+  // Google Analytics
+  (function() {
+    var script = document.createElement("script");
+    script.src = "https://www.googletagmanager.com/gtag/js?id=UA-131851415-1";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(script, s);
+    script.onload = function() {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-131851415-1');
+    }
+  })();
+}
+</script>
+
+    <link href="https://static.leetcode-cn.com/cn-legacy-assets/bootstrap/dist/css/bootstrap.min.css?v=3.3.7" rel="stylesheet">
+    <link href="https://static.leetcode-cn.com/cn-legacy-assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://static.leetcode-cn.com/cn-legacy-assets/bootstrap-table/dist/bootstrap-table.min.css" rel="stylesheet" />
+
+    
+
+    <link rel="stylesheet" href="https://static.leetcode-cn.com/cn-legacy-assets/CACHE/css/daa4cd1fa1c6.css" type="text/css" />
+
+    
+      <link type="text/css" href="//g.alicdn.com/sd/ncpc/nc.css?t=201911221926" rel="stylesheet"/>
+    
+
+    
+<link rel="stylesheet" href="https://static.leetcode-cn.com/cn-legacy-assets/CACHE/css/5e44e88065f6.css" type="text/css" />
+
+    
+  <style>
+    #base_content {
+      margin-top: 20px;
+      z-index: 0;
+      position: relative;
+    }
+  </style>
+  <link rel="stylesheet" href="https://static.leetcode-cn.com/cn-legacy-assets/CACHE/css/56fb78573a7e.css" type="text/css" />
+  <link rel="stylesheet" type="text/css" href="https://static.leetcode-cn.com/cn-mono-assets/production/head/npm-88ad8183.b07648d9.css" />
+<link rel="stylesheet" type="text/css" href="https://static.leetcode-cn.com/cn-mono-assets/production/head/noj-components.91f2eac5.css" />
+<link rel="stylesheet" type="text/css" href="https://static.leetcode-cn.com/cn-mono-assets/production/head/noj-modules.2bb8abd0.css" />
+<link rel="stylesheet" type="text/css" href="https://static.leetcode-cn.com/cn-mono-assets/production/head/main.a5651eb4.css" />
+
+
+    <script type="text/javascript" src="https://static.leetcode-cn.com/cn-legacy-assets/CACHE/js/552cba795668.js"></script>
+    <script src="https://static.leetcode-cn.com/cn-legacy-assets/jquery/dist/jquery.min.js?v=3.3.1"></script>
+    <script src="https://static.leetcode-cn.com/cn-legacy-assets/jquery.cookie/jquery.cookie.js"></script>
+    <script src="https://static.leetcode-cn.com/cn-legacy-assets/jquery-sticky/jquery.sticky.js"></script>
+    <script src="https://static.leetcode-cn.com/cn-legacy-assets/clipboard/dist/clipboard.min.js"></script>
+    <script src="https://static.leetcode-cn.com/cn-legacy-assets/sweetalert2/dist/sweetalert2.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('.sticky').sticky({topSpacing:0});
+      });
+
+      
+      
+      
+      window.LeetCodeData = {
+        features: {
+          questionTranslation: true,
+          subscription: true,
+          signUp: true,
+          chinaProblemDiscuss: false,
+          enableSharedWorker: false,
+          enableChannels: true,
+          enableCnJobs: true,
+        },
+        regionInfo: "CN",
+        userStatus: {
+          isSignedIn: false,
+          optedIn:  null ,
+          isPremium: false,
+          isAdmin:  false ,
+          isStaff:  false ,
+          isTranslator:  false ,
+          isSuperuser:  false ,
+          request_region: 'CN',
+          region: '',
+          permissions: [],
+          useTranslation: true,
+          
+          
+            isCompanyUser:  false ,
+          
+        },
+        chinaURL: "https://leetcode-cn.com",
+        websocketUrl: "wss://ws.leetcode-cn.com/ws",
+        navbar: {
+          
+            loginSocial: [{"id": "weibo", "login_url": "/accounts/weibo/login/"}, {"id": "baidu", "login_url": "/accounts/baidu/login/"}, {"id": "github", "login_url": "/accounts/github/login/"}, {"id": "linkedin_oauth2", "login_url": "/accounts/linkedin_oauth2/login/"}, {"id": "weixin", "login_url": "/accounts/weixin/login/"}],
+          
+          loginNext: undefined,
+          subscription: true,
+          mi: false,
+          miNext: false,
+          contest: true,
+          discuss: true,
+          store: true,
+          book: true,
+          translate: true,
+          identity:  "" ,
+        },
+      };
+    </script>
+    <script src="https://static.leetcode-cn.com/cn-legacy-assets/angular/angular.min.js"></script>
+    <script src="https://static.leetcode-cn.com/cn-legacy-assets/jquery-ui-dist/jquery-ui.min.js"></script>
+    <script src="https://static.leetcode-cn.com/cn-legacy-assets/noty/lib/noty.min.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://static.leetcode-cn.com/cn-legacy-assets/html5shiv/dist/html5shiv.min.js"></script>
+      <script src="https://static.leetcode-cn.com/cn-legacy-assets/respond.js/dest/respond.min.js"></script>
+    <![endif]-->
+
+
+    <!-- Start Alexa Certify Javascript -->
+    <noscript><img src="https://certify.alexametrics.com/atrk.gif?account=tIUcs1Y1Mn20Io" style="display:none" height="1" width="1" alt="" /></noscript>
+    <!-- End Alexa Certify Javascript -->
+
+    
+  <script>
+    $(document).ready(function() {
+      var time_diff = new Date() - new Date(localStorage.getItem('region_switcher_last_close_ts'))
+      if (time_diff > 86400000) {  // 86400000ms == 1day
+        $("#region_switcher").removeClass('hide');
+      }
+    });
+
+    function openNavList() {
+      var menu = $('#nav-menu-btn');
+      var navbar = $('.navbar-collapse');
+      if(!navbar.hasClass('collapsing')) {
+        if(navbar.hasClass('in')) {
+          menu.removeClass('open');
+        } else {
+          menu.addClass('open');
+        }
+      }
+    };
+
+    function closeRegion() {
+      $("#region_switcher").addClass('hide');
+      localStorage.setItem('region_switcher_last_close_ts', new Date());
+    }
+  </script>
+
+  </head>
+  <body>
+    <script src="https://static.leetcode-cn.com/cn-legacy-assets/bootstrap/dist/js/bootstrap.min.js?v=3.3.7"></script>
+    <script src="https://static.leetcode-cn.com/cn-legacy-assets/bootstrap-table/dist/bootstrap-table.min.js"></script>
+    <script type="text/javascript" src="https://static.leetcode-cn.com/cn-legacy-assets/CACHE/js/9fbce6c0813c.js"></script>
+
+    <script type="text/javascript" src="https://static.leetcode-cn.com/cn-assets/webpack_bundles/runtime.703a481d0.js" ></script>
+    <script type="text/javascript" src="https://static.leetcode-cn.com/cn-assets/webpack_bundles/common/global.239c4a5aa.js" ></script>
+    <script type="text/javascript" src="https://static.leetcode-cn.com/cn-assets/webpack_bundles/common/styles/index.15c021c3c.js" ></script>
+    <script type="text/javascript" src="https://static.leetcode-cn.com/cn-assets/webpack_bundles/vendor-libs.f1136fc5b.js" ></script>
+    <script type="text/javascript" src="https://static.leetcode-cn.com/cn-assets/webpack_bundles/common-libs.886abb293.js" ></script>
+    <script type="text/javascript" src="https://static.leetcode-cn.com/cn-assets/webpack_bundles/new-libs.81b33c355.js" ></script>
+
+    
+      <script type="text/javascript" src="https://static.leetcode-cn.com/cn-assets/webpack_bundles/locales/zh-Hans/index.a8dd0b66a.js" ></script>
+    
+    
+    
+  <div class="content-wrapper">
+
+    
+    <style>
+    #noj-navbar {
+      z-index: 1;
+      position: relative;
+    }
+    #noj-navbar-placeholder {
+      height: 64px;
+    }
+    .fav-list .list-group-item {
+      z-index: 1;
+    }
+    .ant-dropdown-menu-item > [class*="UserMenuLink"],
+    .ant-dropdown-menu-submenu-title > [class*="UserMenuLink"] {
+      margin: 0 -12px;
+    }
+    .article-reader-app {
+      background: #fafafa;
+    }
+    .playground-base>.row>div:not(.toolbar-bot-base) {
+      padding-top: 55px;
+    }
+    .playground-base.full-screen .row > div {
+      padding-top: 10px;
+    }
+    .playground-base .full-screen-btn {
+      top: 55px;
+    }
+    </style>
+    <div id="noj-navbar" data-head-version="1.53.2" data-head-sha="338a1cd7a"></div>
+    <div id="noj-navbar-placeholder"></div>
+    <script>
+      var navbar = document.querySelector('#noj-navbar')
+      var placeholder = document.querySelector('#noj-navbar-placeholder')
+      var noNeedExtraPaddingPaths = ['/articles', '/contest', '/explore', '/store', '/playground', '/points']
+      var noNeedExtraPadding = noNeedExtraPaddingPaths.some(function(path) {
+        return location.pathname.startsWith(path)
+      })
+      if (noNeedExtraPadding) {
+        placeholder.style.height = '44px'
+      }
+      var observer = new MutationObserver(function(list, obs) {
+        placeholder.parentNode.removeChild(placeholder)
+        if (navbar.getBoundingClientRect().height === 0) {
+          // mobile page
+          if (!noNeedExtraPadding) {
+            navbar.style.marginBottom = '65px'
+          } else {
+            navbar.style.marginBottom = '45px'
+          }
+          navbar.style.zIndex = 1024
+          navbar.style.position = 'relative'
+          document.querySelector('.container__2tj7').style.zIndex = 2048
+        } else {
+          if (!noNeedExtraPadding) {
+            navbar.style.marginBottom = '20px'
+          }
+        }
+        obs.disconnect()
+      })
+
+      observer.observe(navbar, {
+        childList: true
+      })
+    </script>
+    <div id="base_content">
+      
+  <div id="announcement" class="container">
+    <div id='notice'></div>
+  </div>
+
+<div class="container">
+  <!-- end scroll_to_top_button -->
+  <div class="row" id="category-app"></div>
+
+  <div class="row">
+    <div class="col-md-9 blog-main">
+      <div class="row" id="question-app"></div>
+    </div>
+    <div class="col-md-3 blog-sidebar">
+      <div class="row sidebar-module">
+        <div class="col-md-offset-2 col-md-10">
+          <div id="user-progress-app"></div>
+          <div id="list-card-app"></div>
+        </div>
+      </div>
+      
+        
+<script>
+function expandTags(option) {
+  var btn = $(`#expand-${option}`);
+  var allTags = $(`#all-${option}-tags`);
+  var currentTags = $(`#current-${option}-tags`);
+  if (btn.attr("data-id") == 'Open') {
+    currentTags.attr("class", 'tags');
+    btn.attr("data-id", 'Collapse');
+    btn.find('i.fa').css("transform", "rotate(-180deg)");
+    btn.find('.text').html("隐藏更多");
+  } else {
+    currentTags.attr("class", 'tags tags-fade');
+    btn.attr("data-id", 'Open');
+    btn.find('i.fa').css("transform", "rotate(0)");
+    btn.find('.text').html("Show More");
+  }
+  var tmp = currentTags.html();
+  currentTags.html(allTags.html());
+  allTags.html(tmp);
+}
+
+$(document).click(function(event) {
+  var tagCategories = ["topic", "company"];
+
+  var clickChecker = 0;
+  for (var i = 0; i < tagCategories.length; i++) {
+    if(!$(event.target).closest(`#${tagCategories[i]}-module`).length) {
+      clickChecker++;
+    }
+  }
+
+  if (clickChecker == tagCategories.length) {
+    for (var i = 0; i < tagCategories.length; i++ ) {
+      var btn = $(`#expand-${tagCategories[i]}`);
+      var allTags = $(`#all-${tagCategories[i]}-tags`);
+      var currentTags = $(`#current-${tagCategories[i]}-tags`);
+
+      if(btn.attr("data-id") == 'Collapse') {
+        currentTags.attr("class", 'tags tags-fade');
+        btn.attr("data-id", 'Open');
+        btn.find('i.fa').css("transform", "rotate(0)");
+        btn.find('.text').html("Show More");
+        var tmp = currentTags.html();
+        currentTags.html(allTags.html());
+        allTags.html(tmp);
+      }
+    }
+  }
+})
+
+$(function initTags() {
+  if (/prerender/i.test(navigator.userAgent)) {
+    var result = expandTags('topic');
+  }
+});
+</script>
+
+<div class="row sidebar-module topic" id="topic-module">
+  <div class="col-md-offset-2 col-md-10">
+    <span class="text-300 text-lg tags-title">
+      <i class="fa fa-bookmark-o" aria-hidden="true">
+      </i>&nbsp; 标签分类
+    </span>
+    <div class="tags tags-fade" id="current-topic-tags">
+      
+        
+        <a
+          href="/tag/array/"
+          class="btn btn-xs btn-default round-btn tags-btn lg-topic"
+          title="Array"
+        >
+          <span class="text-sm text-gray">
+            
+              数组
+            
+          </span>
+          <span class="badge text-sm">204</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/dynamic-programming/"
+          class="btn btn-xs btn-default round-btn tags-btn lg-topic"
+          title="Dynamic Programming"
+        >
+          <span class="text-sm text-gray">
+            
+              动态规划
+            
+          </span>
+          <span class="badge text-sm">169</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/math/"
+          class="btn btn-xs btn-default round-btn tags-btn lg-topic"
+          title="Math"
+        >
+          <span class="text-sm text-gray">
+            
+              数学
+            
+          </span>
+          <span class="badge text-sm">159</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/string/"
+          class="btn btn-xs btn-default round-btn tags-btn lg-topic"
+          title="String"
+        >
+          <span class="text-sm text-gray">
+            
+              字符串
+            
+          </span>
+          <span class="badge text-sm">148</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/tree/"
+          class="btn btn-xs btn-default round-btn tags-btn lg-topic"
+          title="Tree"
+        >
+          <span class="text-sm text-gray">
+            
+              树
+            
+          </span>
+          <span class="badge text-sm">123</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/hash-table/"
+          class="btn btn-xs btn-default round-btn tags-btn lg-topic"
+          title="Hash Table"
+        >
+          <span class="text-sm text-gray">
+            
+              哈希表
+            
+          </span>
+          <span class="badge text-sm">121</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/depth-first-search/"
+          class="btn btn-xs btn-default round-btn tags-btn lg-topic"
+          title="Depth-first Search"
+        >
+          <span class="text-sm text-gray">
+            
+              深度优先搜索
+            
+          </span>
+          <span class="badge text-sm">113</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/binary-search/"
+          class="btn btn-xs btn-default round-btn tags-btn lg-topic"
+          title="Binary Search"
+        >
+          <span class="text-sm text-gray">
+            
+              二分查找
+            
+          </span>
+          <span class="badge text-sm">79</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/greedy/"
+          class="btn btn-xs btn-default round-btn tags-btn lg-topic"
+          title="Greedy"
+        >
+          <span class="text-sm text-gray">
+            
+              贪心算法
+            
+          </span>
+          <span class="badge text-sm">66</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/two-pointers/"
+          class="btn btn-xs btn-default round-btn tags-btn lg-topic"
+          title="Two Pointers"
+        >
+          <span class="text-sm text-gray">
+            
+              双指针
+            
+          </span>
+          <span class="badge text-sm">60</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/breadth-first-search/"
+          class="btn btn-xs btn-default round-btn tags-btn lg-topic"
+          title="Breadth-first Search"
+        >
+          <span class="text-sm text-gray">
+            
+              广度优先搜索
+            
+          </span>
+          <span class="badge text-sm">58</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/stack/"
+          class="btn btn-xs btn-default round-btn tags-btn lg-topic"
+          title="Stack"
+        >
+          <span class="text-sm text-gray">
+            
+              栈
+            
+          </span>
+          <span class="badge text-sm">54</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/backtracking/"
+          class="btn btn-xs btn-default round-btn tags-btn lg-topic"
+          title="Backtracking"
+        >
+          <span class="text-sm text-gray">
+            
+              回溯算法
+            
+          </span>
+          <span class="badge text-sm">50</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/design/"
+          class="btn btn-xs btn-default round-btn tags-btn lg-topic"
+          title="Design"
+        >
+          <span class="text-sm text-gray">
+            
+              设计
+            
+          </span>
+          <span class="badge text-sm">42</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/bit-manipulation/"
+          class="btn btn-xs btn-default round-btn tags-btn lg-topic"
+          title="Bit Manipulation"
+        >
+          <span class="text-sm text-gray">
+            
+              位运算
+            
+          </span>
+          <span class="badge text-sm">38</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/sort/"
+          class="btn btn-xs btn-default round-btn tags-btn lg-topic"
+          title="Sort"
+        >
+          <span class="text-sm text-gray">
+            
+              排序
+            
+          </span>
+          <span class="badge text-sm">38</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/graph/"
+          class="btn btn-xs btn-default round-btn tags-btn lg-topic"
+          title="Graph"
+        >
+          <span class="text-sm text-gray">
+            
+              图
+            
+          </span>
+          <span class="badge text-sm">36</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/linked-list/"
+          class="btn btn-xs btn-default round-btn tags-btn lg-topic"
+          title="Linked List"
+        >
+          <span class="text-sm text-gray">
+            
+              链表
+            
+          </span>
+          <span class="badge text-sm">36</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/heap/"
+          class="btn btn-xs btn-default round-btn tags-btn lg-topic"
+          title="Heap"
+        >
+          <span class="text-sm text-gray">
+            
+              堆
+            
+          </span>
+          <span class="badge text-sm">34</span>
+        </a>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+
+    <span class="hide" id="all-topic-tags">
+      
+        
+        <a
+          href="/tag/array/"
+          class="btn btn-xs btn-default round-btn tags-btn sm-topic"
+          title="Array"
+        >
+          <span class="text-sm text-gray">
+            
+              数组
+            
+
+          </span>
+          <span class="badge text-sm">204</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/dynamic-programming/"
+          class="btn btn-xs btn-default round-btn tags-btn sm-topic"
+          title="Dynamic Programming"
+        >
+          <span class="text-sm text-gray">
+            
+              动态规划
+            
+
+          </span>
+          <span class="badge text-sm">169</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/math/"
+          class="btn btn-xs btn-default round-btn tags-btn sm-topic"
+          title="Math"
+        >
+          <span class="text-sm text-gray">
+            
+              数学
+            
+
+          </span>
+          <span class="badge text-sm">159</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/string/"
+          class="btn btn-xs btn-default round-btn tags-btn sm-topic"
+          title="String"
+        >
+          <span class="text-sm text-gray">
+            
+              字符串
+            
+
+          </span>
+          <span class="badge text-sm">148</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/tree/"
+          class="btn btn-xs btn-default round-btn tags-btn sm-topic"
+          title="Tree"
+        >
+          <span class="text-sm text-gray">
+            
+              树
+            
+
+          </span>
+          <span class="badge text-sm">123</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/hash-table/"
+          class="btn btn-xs btn-default round-btn tags-btn sm-topic"
+          title="Hash Table"
+        >
+          <span class="text-sm text-gray">
+            
+              哈希表
+            
+
+          </span>
+          <span class="badge text-sm">121</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/depth-first-search/"
+          class="btn btn-xs btn-default round-btn tags-btn sm-topic"
+          title="Depth-first Search"
+        >
+          <span class="text-sm text-gray">
+            
+              深度优先搜索
+            
+
+          </span>
+          <span class="badge text-sm">113</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/binary-search/"
+          class="btn btn-xs btn-default round-btn tags-btn sm-topic"
+          title="Binary Search"
+        >
+          <span class="text-sm text-gray">
+            
+              二分查找
+            
+
+          </span>
+          <span class="badge text-sm">79</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/greedy/"
+          class="btn btn-xs btn-default round-btn tags-btn sm-topic"
+          title="Greedy"
+        >
+          <span class="text-sm text-gray">
+            
+              贪心算法
+            
+
+          </span>
+          <span class="badge text-sm">66</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/two-pointers/"
+          class="btn btn-xs btn-default round-btn tags-btn sm-topic"
+          title="Two Pointers"
+        >
+          <span class="text-sm text-gray">
+            
+              双指针
+            
+
+          </span>
+          <span class="badge text-sm">60</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/breadth-first-search/"
+          class="btn btn-xs btn-default round-btn tags-btn sm-topic"
+          title="Breadth-first Search"
+        >
+          <span class="text-sm text-gray">
+            
+              广度优先搜索
+            
+
+          </span>
+          <span class="badge text-sm">58</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/stack/"
+          class="btn btn-xs btn-default round-btn tags-btn sm-topic"
+          title="Stack"
+        >
+          <span class="text-sm text-gray">
+            
+              栈
+            
+
+          </span>
+          <span class="badge text-sm">54</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/backtracking/"
+          class="btn btn-xs btn-default round-btn tags-btn sm-topic"
+          title="Backtracking"
+        >
+          <span class="text-sm text-gray">
+            
+              回溯算法
+            
+
+          </span>
+          <span class="badge text-sm">50</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/design/"
+          class="btn btn-xs btn-default round-btn tags-btn sm-topic"
+          title="Design"
+        >
+          <span class="text-sm text-gray">
+            
+              设计
+            
+
+          </span>
+          <span class="badge text-sm">42</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/bit-manipulation/"
+          class="btn btn-xs btn-default round-btn tags-btn sm-topic"
+          title="Bit Manipulation"
+        >
+          <span class="text-sm text-gray">
+            
+              位运算
+            
+
+          </span>
+          <span class="badge text-sm">38</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/sort/"
+          class="btn btn-xs btn-default round-btn tags-btn sm-topic"
+          title="Sort"
+        >
+          <span class="text-sm text-gray">
+            
+              排序
+            
+
+          </span>
+          <span class="badge text-sm">38</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/graph/"
+          class="btn btn-xs btn-default round-btn tags-btn sm-topic"
+          title="Graph"
+        >
+          <span class="text-sm text-gray">
+            
+              图
+            
+
+          </span>
+          <span class="badge text-sm">36</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/linked-list/"
+          class="btn btn-xs btn-default round-btn tags-btn sm-topic"
+          title="Linked List"
+        >
+          <span class="text-sm text-gray">
+            
+              链表
+            
+
+          </span>
+          <span class="badge text-sm">36</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/heap/"
+          class="btn btn-xs btn-default round-btn tags-btn sm-topic"
+          title="Heap"
+        >
+          <span class="text-sm text-gray">
+            
+              堆
+            
+
+          </span>
+          <span class="badge text-sm">34</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/union-find/"
+          class="btn btn-xs btn-default round-btn tags-btn sm-topic"
+          title="Union Find"
+        >
+          <span class="text-sm text-gray">
+            
+              并查集
+            
+
+          </span>
+          <span class="badge text-sm">28</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/sliding-window/"
+          class="btn btn-xs btn-default round-btn tags-btn sm-topic"
+          title=""
+        >
+          <span class="text-sm text-gray">
+            
+              Sliding Window
+            
+
+          </span>
+          <span class="badge text-sm">20</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/divide-and-conquer/"
+          class="btn btn-xs btn-default round-btn tags-btn sm-topic"
+          title="Divide and Conquer"
+        >
+          <span class="text-sm text-gray">
+            
+              分治算法
+            
+
+          </span>
+          <span class="badge text-sm">18</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/trie/"
+          class="btn btn-xs btn-default round-btn tags-btn sm-topic"
+          title="Trie"
+        >
+          <span class="text-sm text-gray">
+            
+              字典树
+            
+
+          </span>
+          <span class="badge text-sm">17</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/recursion/"
+          class="btn btn-xs btn-default round-btn tags-btn sm-topic"
+          title="Recursion"
+        >
+          <span class="text-sm text-gray">
+            
+              递归
+            
+
+          </span>
+          <span class="badge text-sm">15</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/segment-tree/"
+          class="btn btn-xs btn-default round-btn tags-btn sm-topic"
+          title="Segment Tree"
+        >
+          <span class="text-sm text-gray">
+            
+              线段树
+            
+
+          </span>
+          <span class="badge text-sm">11</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/ordered-map/"
+          class="btn btn-xs btn-default round-btn tags-btn sm-topic"
+          title=""
+        >
+          <span class="text-sm text-gray">
+            
+              Ordered Map
+            
+
+          </span>
+          <span class="badge text-sm">10</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/queue/"
+          class="btn btn-xs btn-default round-btn tags-btn sm-topic"
+          title="Queue"
+        >
+          <span class="text-sm text-gray">
+            
+              队列
+            
+
+          </span>
+          <span class="badge text-sm">9</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/minimax/"
+          class="btn btn-xs btn-default round-btn tags-btn sm-topic"
+          title="Minimax"
+        >
+          <span class="text-sm text-gray">
+            
+              极小化极大
+            
+
+          </span>
+          <span class="badge text-sm">8</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/binary-indexed-tree/"
+          class="btn btn-xs btn-default round-btn tags-btn sm-topic"
+          title="Binary Indexed Tree"
+        >
+          <span class="text-sm text-gray">
+            
+              树状数组
+            
+
+          </span>
+          <span class="badge text-sm">6</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/random/"
+          class="btn btn-xs btn-default round-btn tags-btn sm-topic"
+          title=""
+        >
+          <span class="text-sm text-gray">
+            
+              Random
+            
+
+          </span>
+          <span class="badge text-sm">6</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/topological-sort/"
+          class="btn btn-xs btn-default round-btn tags-btn sm-topic"
+          title="Topological Sort"
+        >
+          <span class="text-sm text-gray">
+            
+              拓扑排序
+            
+
+          </span>
+          <span class="badge text-sm">6</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/brainteaser/"
+          class="btn btn-xs btn-default round-btn tags-btn sm-topic"
+          title="Brainteaser"
+        >
+          <span class="text-sm text-gray">
+            
+              脑筋急转弯
+            
+
+          </span>
+          <span class="badge text-sm">5</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/geometry/"
+          class="btn btn-xs btn-default round-btn tags-btn sm-topic"
+          title="Geometry"
+        >
+          <span class="text-sm text-gray">
+            
+              几何
+            
+
+          </span>
+          <span class="badge text-sm">4</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/line-sweep/"
+          class="btn btn-xs btn-default round-btn tags-btn sm-topic"
+          title=""
+        >
+          <span class="text-sm text-gray">
+            
+              Line Sweep
+            
+
+          </span>
+          <span class="badge text-sm">4</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/binary-search-tree/"
+          class="btn btn-xs btn-default round-btn tags-btn sm-topic"
+          title="Binary Search Tree"
+        >
+          <span class="text-sm text-gray">
+            
+              二叉搜索树
+            
+
+          </span>
+          <span class="badge text-sm">2</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/rejection-sampling/"
+          class="btn btn-xs btn-default round-btn tags-btn sm-topic"
+          title=""
+        >
+          <span class="text-sm text-gray">
+            
+              Rejection Sampling
+            
+
+          </span>
+          <span class="badge text-sm">2</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/reservoir-sampling/"
+          class="btn btn-xs btn-default round-btn tags-btn sm-topic"
+          title="Reservoir Sampling"
+        >
+          <span class="text-sm text-gray">
+            
+              蓄水池抽样
+            
+
+          </span>
+          <span class="badge text-sm">2</span>
+        </a>
+        
+      
+        
+        <a
+          href="/tag/memoization/"
+          class="btn btn-xs btn-default round-btn tags-btn sm-topic"
+          title="Memoization"
+        >
+          <span class="text-sm text-gray">
+            
+              记忆化
+            
+
+          </span>
+          <span class="badge text-sm">1</span>
+        </a>
+        
+      
+        
+      
+    </span>
+    <div
+      id="expand-topic"
+      data-id="Open"
+      class="show-more-btn text-center"
+    >
+      <hr class="line solid">
+      <div class="btn btn-default btn-round btn-sm" onclick="expandTags('topic')">
+        <span class="text">Show More</span>&nbsp;<i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+    </div>
+  </div>
+
+</div>
+
+    </div>
+
+  </div>
+
+  
+  <footer class="site-footer chinese" id="lc-footer">
+    <div class="container">
+      <hr>
+      <div class="row">
+        
+        <div class="col-sm-5 copyright">
+          <a href="https://lingkou.com" target="_blank" style="color:#373737">
+            <span>© 2019 领扣网络（上海）有限公司版权所有</span>
+          </a>
+        </div>
+        
+        <div class="text-right col-sm-7">
+          <div class="links">
+            <a href="/about/">关于我们</a>
+            &nbsp;|&nbsp;
+            <a href="https://support.leetcode-cn.com/hc/request/new/">问题反馈</a>
+            &nbsp;|&nbsp;
+            <a href="/support/">帮助中心</a>
+            &nbsp;|&nbsp;
+            
+              <span class="hidden-xs hidden-sm" id="Join_LeetCode">
+                <a href="/jobs/lingkou/">加入我们</a>
+                &nbsp;|&nbsp;
+              </span>
+            
+            
+            <a href="/terms/">使用条例</a>
+            &nbsp;|&nbsp;
+            <a href="/privacy/">隐私政策</a>
+            
+              <span class="region-base">
+                
+                  <span class="hidden-xs space"> &nbsp; </span>
+                  <a href="/region/" class="choose-region hidden-xs">
+                    <img src="https://static.leetcode-cn.com/cn-legacy-assets/images/region/cn.svg" height="14"/>
+                    <span>中国</span>
+                  </a>
+                
+              </span>
+            
+          </div>
+        </div>
+      </div>
+      
+        <div class="row chinese-license">
+          <div class="col-sm-6 text-right col-sm-push-6 gongan-beian">
+            <a target="_blank"
+              href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31011502007040"
+              style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"
+            >
+              <img class="beian" src="https://static.leetcode-cn.com/cn-legacy-assets/images/beian.png" style="float:left;"/>
+              <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px;">
+                沪公网安备 31011502007040号
+              </p>
+            </a>
+          </div>
+
+          <div class="col-sm-6 col-sm-pull-6 icp-beian">
+            <div class="ICP license">
+              <a href="http://beian.miit.gov.cn" target="_blank">
+                <span>沪ICP备17051546号</span>
+              </a>
+              <span class="region-base-xs">&nbsp;
+                <a href="/region/" class="choose-region">
+                  <img src="https://static.leetcode-cn.com/cn-legacy-assets/images/region/cn.svg" height="10"/>&nbsp;<span>中国</span>
+                </a>
+              </span>
+            </div>
+            <!--
+            <div class="sgs license">
+              <a href="http://sh.gsxt.gov.cn/notice/notice/view?uuid=Db4Dh06YKFTDP4..0w0NzyaG19T8LNcP&tabPanel=01" target="_blank">
+                <img src="https://static.leetcode-cn.com/cn-legacy-assets/images/sgs.png" alt="上海工商" height="14" />上海工商
+              </a>
+            </div>
+            -->
+          </div>
+        </div>
+      
+    </div>
+  </footer>
+
+  <div class="modal fade simple-modal" id="supportModal" role="dialog">
+    <div class="modal-center">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <span class="text-lg text-300">&nbsp;有什么可以帮到您？</span>
+          </div>
+
+          <div class="modal-body">
+            <div class="row text-center">
+              <div class="col-sm-4">
+                <a
+                  class="support-module btn btn-default"
+                  href="mailto:billing@leetcode.com?subject=Billing%20Issue&body=Name:%0D%0A%0D%0AUsername:%0D%0A%0D%0AMessage:%0D%0A%0D%0A"
+                  target="_blank"
+                >
+                  <i class="fa fa-credit-card text-xl" aria-hidden="true"></i>
+                  <br/><span class="text">账号、账单问题</span>
+                </a>
+              </div>
+              <div class="col-sm-4">
+                <a
+                  class="support-module btn btn-default"
+                  href="mailto:support@leetcode.com?subject=General%20Support&body=Name:%0D%0A%0D%0AUsername:%0D%0A%0D%0AMessage:%0D%0A%0D%0A"
+                  target="_blank"
+                >
+                  <i class="fa fa-life-ring text-xl" aria-hidden="true"></i>
+                  <br/><span class="text">一般支持</span>
+                </a>
+              </div>
+              <div class="col-sm-4">
+                <a
+                  class="support-module btn btn-default"
+                  href="mailto:feedback@leetcode.com?subject=Other%20Inquiries&body=Name:%0D%0A%0D%0AUsername:%0D%0A%0D%0AMessage:%0D%0A%0D%0A"
+                  target="_blank"
+                >
+                  <i class="fa fa-question-circle text-xl" aria-hidden="true"></i>
+                  <br/><span class="text">其他咨询</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <script type="text/javascript" src="https://static.leetcode-cn.com/cn-mono-assets/production/head/runtime~main.dca29c66.js"></script>
+<script type="text/javascript" src="https://static.leetcode-cn.com/cn-mono-assets/production/head/npm-596046b7.4c58c5fc.js"></script>
+<script type="text/javascript" src="https://static.leetcode-cn.com/cn-mono-assets/production/head/npm-88ad8183.b07648d9.js"></script>
+<script type="text/javascript" src="https://static.leetcode-cn.com/cn-mono-assets/production/head/npm-ea8a6886.1e2d6e9f.js"></script>
+<script type="text/javascript" src="https://static.leetcode-cn.com/cn-mono-assets/production/head/npm-78587d68.4c8ac9ea.js"></script>
+<script type="text/javascript" src="https://static.leetcode-cn.com/cn-mono-assets/production/head/npm-b3a903c8.b43ebdaf.js"></script>
+<script type="text/javascript" src="https://static.leetcode-cn.com/cn-mono-assets/production/head/npm-f693a0bb.e2a29163.js"></script>
+<script type="text/javascript" src="https://static.leetcode-cn.com/cn-mono-assets/production/head/vendor.ab7cff3f.js"></script>
+<script type="text/javascript" src="https://static.leetcode-cn.com/cn-mono-assets/production/head/noj-dls.402cbf0d.js"></script>
+<script type="text/javascript" src="https://static.leetcode-cn.com/cn-mono-assets/production/head/noj-components.91f2eac5.js"></script>
+<script type="text/javascript" src="https://static.leetcode-cn.com/cn-mono-assets/production/head/noj-modules.2bb8abd0.js"></script>
+<script type="text/javascript" src="https://static.leetcode-cn.com/cn-mono-assets/production/head/noj-track.402eeed1.js"></script>
+<script type="text/javascript" src="https://static.leetcode-cn.com/cn-mono-assets/production/head/noj-common.0b25540b.js"></script>
+<script type="text/javascript" src="https://static.leetcode-cn.com/cn-mono-assets/production/head/noj-assets.ae9cc5d8.js"></script>
+<script type="text/javascript" src="https://static.leetcode-cn.com/cn-mono-assets/production/head/noj-ws.eacf65e2.js"></script>
+<script type="text/javascript" src="https://static.leetcode-cn.com/cn-mono-assets/production/head/noj-schema.bbf090bd.js"></script>
+<script type="text/javascript" src="https://static.leetcode-cn.com/cn-mono-assets/production/head/main.a5651eb4.js"></script>
+  <script type="text/javascript" src="https://static.leetcode-cn.com/cn-legacy-assets/CACHE/js/eb02df0bc0e3.js"></script>
+
+  <script>
+    (function($, w, d){
+      $(function() {
+        $('#navbar-right img').addClass('img-rounded');
+        setFooterStyles();
+      });
+
+      function setFooterStyles() {
+        var $footer = $('#lc-footer'),
+            height = $footer.outerHeight();
+        if (!$footer.parent().is('body')) return ;
+        $footer.css('margin-top', -height);
+        $('.content-wrapper').css('padding-bottom', height);
+      }
+
+    }(jQuery, window, document));
+    try {
+      ace.config.set("basePath", "https://static.leetcode-cn.com/cn-legacy-assets/ace-builds/src-noconflict/")
+    } catch(err) {}
+  </script>
+
+
+    <script>
+      (function($, w, d){
+
+        $('#exit-mock-user-btn').click(function() {
+          $.ajax({
+            type: 'POST',
+            url: "/api/exit_mock_user/",
+            data: $('#exit-mock-user-form').serialize(),
+            success: function() {
+              window.location = window.location.href.split("?")[0];
+            }
+          });
+        });
+      }(jQuery, window, document));
+    </script>
+    
+<script>
+var pageData = {
+  isAuthenticated: false ,
+  congratulation: false ,
+  slugObj: JSON.parse('{\u0022type\u0022: \u0022category\u0022, \u0022slug\u0022: \u0022algorithms\u0022}'),
+};
+</script>
+<script>
+  
+</script>
+<script type="text/javascript" src="https://static.leetcode-cn.com/cn-legacy-assets/CACHE/js/f31209e6087d.js"></script>
+<script type="text/javascript" src="https://static.leetcode-cn.com/cn-assets/webpack_bundles/apps/problemset/question_list.353747b6a.js" ></script>
+
+    
+      <!-- HOTFIX -->
+<style>
+.question-list-base .question-list-table .fa.fa-info-circle.title-tooltip[data-placement="top"] {
+  display: none;
+}
+</style>
+<script>
+/* Remove this start */
+function doAddGoods() {
+    var product_container = document.querySelector(".body.row");
+    var div_1 = document.createElement("div");
+    var div_2 = document.createElement("div");
+    product_container.append(div_1);
+    product_container.append(div_2);
+    var product_1 = product_container.childNodes[7];
+    product_1.className = "store-item-outer__2clL col-md-4 col-sm-6";
+    product_1.innerHTML = "<a href='https://detail.youzan.com/show/goods?alias=271n43vr9hen7' target='_blank' style='display: block;' class='store-item-base__850f'><div style='position: relative;'><div class='item-showcase__3nOV' style='display: inline-block;'><img style='background: none;'src='https://pic.leetcode-cn.com/ad128633a1f9fec540dca38f37262de9732856e947a32405cc22c98ea4320e63-shuihu.jpg' width='100%' alt='力扣运动水壶'></div><div class='radio-group__aZJo'></div></div><div class='item-detail__3Dyg' style='display: flex;'><div class='item-info__31Bl'><div class='item-name__3l9c'>力扣运动水壶</div><div class='item-descirption__1KJu'>极简设计、不锈钢内核、保温保冷</div></div><div class='item-price btn btn-success pull-right'>前往购买</div></div></a>";
+    var product_2 = product_container.childNodes[8];
+    product_2.className = "store-item-outer__2clL col-md-4 col-sm-6";
+    product_2.innerHTML = "<a href='https://detail.youzan.com/show/goods?alias=36ct5ydv4klgz&activity_alias=undefined' target='_blank' style='display: block;' class='store-item-base__850f'><div style='position: relative;'><div class='item-showcase__3nOV' style='display: inline-block;'><img style='background: none;'src='https://pic.leetcode-cn.com/be2ed6d9755ad60d610b687e58d634776f6e5d61a8e06f05272572b888e9d7b6-bao.jpg' width='100%' alt='力扣极客双肩包'></div><div class='radio-group__aZJo'></div></div><div class='item-detail__3Dyg' style='display: flex;'><div class='item-info__31Bl'><div class='item-name__3l9c'>力扣极客双肩包</div><div class='item-descirption__1KJu'>USB 充电、防泼水、大容量</div></div><div class='item-price btn btn-success pull-right'>前往购买</div></div></a>";
+}
+// product
+if(window.location.pathname == "/store/") {
+  // dynamic script
+  function addGoods(selector) {
+    if (document.querySelector(selector) == null) {
+      setTimeout(function() {
+        addGoods(selector);
+      }, 100);
+    } else {
+      doAddGoods();
+    }
+  }
+addGoods(".store-item-outer__2clL");
+}
+/* Remove this end */
+
+
+  // Home page hotfix
+  if(window.location.pathname == "/" && false) {
+  var homeOnlyHtml = document.createElement("div");
+  homeOnlyHtml.innerHTML = `
+  <style>
+  #noj-navbar {
+    position: relative;
+    z-index: 10;
+  }
+  @media (min-width: 991px) {
+  #student-banner {
+    display: none;
+  }
+  }
+  #student-banner {
+    width: 100%;
+    text-align: center;
+    margin-top: -20px;
+    background-image: url("https://pic.leetcode-cn.com/62644078c3ecf3426368ade02b44452d554659ff39ecd02eba9ff3c7b50c45d1-banner_mobile_2@2x.png");
+    background-position: 50% 50%;
+    background-size: auto 100%;
+  }
+  #student-banner img {
+    width: 100%;
+    margin: auto;
+    max-width: 550px;
+  }
+  </style>
+  <a  href="/contest/season/2019-fall/" target="_blank">
+  <div id="student-banner">
+  <img src="https://pic.leetcode-cn.com/511cb1a57e8506bb63f080d897e542d759cedd209e15bae81975dc1433ea01c3-banner_mobile@_12x.png"/>
+  </div>
+  </a>
+  `;
+  var homeInsert = document.querySelector(".content-wrapper");
+  homeInsert.insertBefore(homeOnlyHtml, document.getElementById("base_content"));
+  }
+  </script>
+  
+  
+  
+  <style>
+  .content-wrapper #base_content {
+    margin-top: 0;
+  }
+  
+  /* Old question description fix */
+  .question-content blockquote {
+    font-size: 14px;
+  }
+  /* Playground fix */
+  .container-fluid.playground-base .editor-base,
+  .container-fluid.playground-base .console-base {
+    margin-top: -44px;
+  }
+  
+  .modal-backdrop.fade.in {
+    display: none;
+  }
+  
+  .container-fluid.playground-base .full-screen-btn {
+    display: none;
+  }
+  
+  
+  /*Hide contest discuss*/
+  .btn-default[href*="/contest/"][href*="/discuss/"] {
+    display: none;
+  }
+  
+  .global-ranking-base [class*="simple-avatar"] [href*="/leetcode-cn.com/"]::after {
+    content: "🇨🇳";
+    display: block;
+    position: absolute;
+    color: red;
+    top: 9px;
+    right: 18px;
+    font-size: 30px;
+  }
+  [data-original-title*="China"] {
+    opacity: 0;
+    display: none;
+  }
+  td a.ranking-username {
+    display: inline;
+  }
+  .ranking-username[href*="/leetcode-cn.com/"] {
+    position: relative;
+  }
+  .ranking-username[href*="/leetcode-cn.com/"]::after {
+    content: "🇨🇳";
+    display: block;
+    position: absolute;
+    color: red;
+    top: -5px;
+    right: -28px;
+    font-size: 20px;
+  }
+  
+  .content-wrapper label.lang-switcher {
+    font-weight: bold;
+    color: black;
+  }
+  #noj-navbar {
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  }
+  div[class*="PositionContainer"] {
+    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+  }
+  
+  #noj-navbar [class*="NavWrapper"] {
+    border-bottom: none;
+  }
+  .playground-base .toolbar-base,
+  .playground-base .result .console-header {
+    box-shadow: none;
+  }
+  .playground-base .toolbar-base {
+    border-bottom: solid 1px #eee;
+  }
+  
+  .playground-base .row .console-base {
+    border-left: solid 1px #eee;
+  }
+  .playground-base .row .toolbar-bot-base,
+  .playground-base .console-input-base textarea {
+    border-top: solid 1px #eee;
+  }
+  .playground-base .result .output-base pre#output {
+    padding: 0;
+  }
+  @media (max-width: 767px) {
+    .playground-base .playground-title-base {
+      display: none;
+    }
+  }
+  </style>
+  <!-- HOTFIX -->
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  <!--@START: Nav Highlight Tag -->
+  <!-- <style>
+  [class*="NavbarListItem"]{
+    position: relative;
+  }
+  [class*="NavbarListItem"] > a {
+      position: relative;
+  }
+  [class*="NavbarListItem"] > .ant-dropdown-link > div::after {
+    right: -16px !important;
+    top: -9px;
+    content: "双11" !important;
+    background: #fe4316 !important;
+    color: #fff;
+    font-size: 12px;
+    position: absolute;
+    padding: 0 5px;
+    border-radius: 9px;
+    height: 18px;
+    line-height: 18px;
+    transform: scale(0.7);
+  }
+  .ant-dropdown-menu-item > a {
+      position: relative;
+  }
+  .ant-dropdown-menu-item > a[href="/store/"]::after{
+    display: block;
+    font-size: 12px;
+    position: absolute;
+    top: -3px;
+    right: -1px;
+    font-weight: 500;
+    transform: scale(0.8);
+    content: "新";
+    color: red;
+  }
+  .ant-dropdown-menu-item > a[href="/premium/"]::after{
+    display: block;
+    font-size: 12px;
+    position: absolute;
+    top: -3px;
+    right: -1px;
+    font-weight: 500;
+    transform: scale(0.8);
+    content: "赠";
+    color: red;
+  }
+  
+  </style> -->
+  <!--@END: Nav Highlight Tag -->
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  <!--@START: New Feature Tag -->
+  <script type="text/javascript">
+  var stroageItemShowNew = '1326380';
+  var stroageItemShowNewVersion = 'v1';
+  var showNewFt = localStorage.getItem(stroageItemShowNew + stroageItemShowNewVersion);
+  
+  function closeNewFt() {
+    localStorage.setItem(stroageItemShowNew + stroageItemShowNewVersion, true);
+    document.querySelector("#lc_navbar #new-ft").remove();
+  }
+  
+  var newFt = '<a href="https://support.leetcode-cn.com/user/login/?request=%2Fhc%2Fkb%2Farticle%2F' + stroageItemShowNew +'%2F" onclick="closeNewFt()" target="_blank">\
+    <img src="https://assets.leetcode-cn.com/support/new.svg" />\
+    </a>';
+  
+  
+  // dynamic script
+  function applyNewFt(selector) {
+    if (document.querySelector(selector) == null) {
+      setTimeout(function() {
+        applyNewFt(selector);
+      }, 100);
+    } else {
+      console.log("Found!");
+      var newFtDiv = document.createElement('div');
+      newFtDiv.innerHTML = newFt;
+      newFtDiv.id = "new-ft";
+      document.querySelector(selector).appendChild(newFtDiv);
+    }
+  }
+  
+  if(showNewFt == null) {
+    applyNewFt('[class*="NavWrapper"] [class*="NavContainer"]');
+  }
+  </script>
+  
+  
+  
+  
+  <style>
+    #new-ft img {
+      width: 48px;
+    }
+    #new-ft {
+      transition: all 0.2s;
+      cursor: pointer;
+      position: absolute;
+      z-index: 800;
+      top: -10px;
+      right: 300px;
+    }
+    #new-ft:hover {
+      top: -5px;
+    }
+    @media (max-width: 767px) {
+      #new-ft {
+        right: 60px;
+      }
+    }
+    [class*="NavWrapper"] [class*="NavContainer"]{
+      position: relative;
+    }
+  </style>
+  <!--@END: New Feature Tag -->
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <style>
+  #question-detail-app a[href="/problems/two-sum/solution/"] {
+    position: relative;
+  }
+  #question-detail-app a[href="/problems/two-sum/solution/"]::after {
+    content: "new";
+    display: block;
+    color: red;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  </style>
+  
+  <!-- Special Contest -->
+  <!--
+  <style>
+    #contest-app .contest-home-base .wrapper__KAWb {
+      transition: 0.4s all;
+      cursor: pointer;
+      background-color: #222;
+      background-image: url('https://assets.leetcode-cn.com/aliyun-lc-upload/contest/bi-weekly/banner.png');
+      background-position: 50%;
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+    }
+    
+    #contest-app .contest-home-base .wrapper__KAWb:hover {
+      background-image: url('https://assets.leetcode-cn.com/aliyun-lc-upload/contest/bi-weekly/banner.png');
+    }
+    
+    #contest-app .contest-home-base .wrapper__KAWb .container {
+      opacity: 0;
+      cursor: pointer;
+    }
+    </style>
+    
+    <script>
+    var isContest = window.location.pathname == "/contest/";
+    
+    
+    
+    // dynamic script
+    function findContestBanner(selector) {
+      if (document.querySelector(selector) == null) {
+        setTimeout(function() {
+          findContestBanner(selector);
+        }, 100);
+      } else {
+        // Do something
+        document.querySelector(selector).onclick = function() {
+          window.open('/contest/biweekly-contest-1','_blank');
+        };
+    
+      }
+    }
+    
+    findContestBanner("#contest-app .contest-home-base .wrapper__KAWb");
+  </script>
+  -->
+  
+  
+  
+  
+  
+  
+  
+  
+  <script type="text/javascript">
+  /*
+  $("footer.site-footer .copyright a span").html("© 2018 力扣信息科技（上海）有限公司");
+  $("#Join_LeetCode").html("<a href='/jobs/lingkou/'>关于我们</a>&nbsp;|&nbsp;");
+  if(location.href.includes('/jobs/lingkou/')){
+  function findReplace(selector) {
+      if (document.querySelector(selector) == null) {
+        setTimeout(function() {
+          findReplace(selector);
+        }, 100);
+      } else {
+        document.querySelector(selector).style.display = "none";
+      }
+    }
+    findReplace('.css-1cfs9kq-CompanyInfoWrapper');
+  
+  
+  function findReplace2(selector) {
+      if (document.querySelector(selector) == null) {
+        setTimeout(function() {
+          findReplace2(selector);
+        }, 100);
+      } else {
+        document.querySelector(selector).innerHTML = "力扣信息科技（上海）有限公司 有一支年轻有为的团队，丰富的职业技术经验和创新型的公司管理模式，聚集了来自全球百强科技公司以及世界著名高校的顶尖人才。我们相信，只有这样一群专业于互联网行业之中的人，才能给我们的用户带来最佳的科技产品。<br><br>力扣（LeetCode）倡导共同创业的工作方式，提供灵活舒适的办公条件，平等自由的工作氛围，在这里你需要做的就是你自己，无须抑制你的智慧和创造能力！";
+      }
+    }
+    findReplace2('.css-1nhvfvj-Summary');
+  }
+  */
+  </script>
+  
+  
+  
+  
+  
+  <style>
+  /*
+  ul.user-dropdown .nav-user-app .user-info::after {
+    content: "new";
+    color: red;
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 17px;
+    font-size: 10px;
+  }
+  */
+  </style>
+  
+  <!-- discuss.lingkou.com -->
+  <script>
+  if (/discuss.lingkou.com/.test(location.href)) {
+    __runForLingkouDotCom()
+  }
+  
+  function __runForLingkouDotCom() {
+    // dynamic style tag
+    var style = document.createElement('style')
+    var content = 'li#discussNav { display: none; }'
+    style.type = 'text/css'
+    style.appendChild(document.createTextNode(content))
+    document.head.appendChild(style)
+  
+    // dynamic script
+    function findSocial(selector) {
+      if (document.querySelector(selector) == null) {
+        setTimeout(function() {
+          findSocial(selector);
+        }, 100);
+      } else {
+        document.querySelector(selector).style.display = "none";
+      }
+    }
+    findSocial('.side-block.discuss');
+  
+    document.querySelector('.chinese-license .gongan-beian').innerHTML = '<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31011502007802" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img class="beian" src="https://static.leetcode-cn.com/cn-legacy-assets/images/beian.png" style="float:left;"><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px;">沪公网安备31011502007802号</p></a>';
+  
+    document.querySelector('.ICP.license a').innerHTML = '<span>沪ICP备18019787号</span>';
+  }
+  </script>
+  
+  
+
+  
+  
+  
+  
+  <style>
+  #interviewed-div {
+      display: none;
+  }
+  </style>
+  <script>
+   function removeStatsObj() {
+      if (document.querySelector("#interviewed-div") == null) {
+        setTimeout(function() {
+          removeStatsObj();
+        }, 100);
+      } else {
+        $( "#interviewed-div" ).remove();
+      }
+    }
+  
+  if(document.getElementById("question-detail-app") !== null) {
+    removeStatsObj();
+  }
+  </script>
+  
+  <link rel="stylesheet" type="text/css" href="https://assets.leetcode-cn.com/lccn-resources/lccn.css" media="screen">
+  
+  
+  <!-- k12 洞 -->
+  <script>
+    function removeWaOutput() {
+      var styleTag = document.createElement('style')
+      document.head.appendChild(styleTag)
+      styleTag.sheet.insertRule('#wa_output { display: none; }')
+      styleTag.sheet.insertRule('#more-details { display: none; }')
+    }
+  
+    if (window.location.href.search('k12-') >= 0) {
+      removeWaOutput()
+    }
+  </script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script>
+  function insertSideBar(selector) {
+    if (document.querySelector(selector) == null) {
+      setTimeout(function() {
+        insertSideBar(selector);
+      }, 100);
+    } else {
+  
+      console.log("Found!");
+      var newSideElem = document.createElement('div');
+      newSideElem.innerHTML = `
+  <style>
+  #legal-copyright-info {
+    margin-top: 10px;
+    font-size: 12px;
+    color: grey;
+  }
+  
+  #legal-copyright-info a {
+   color: grey;
+  }
+  </style>
+  <div style="text-align: left; margin-top: 50px; margin-left: 20px;" class="hide">
+  <a href="/about" target="_blank"><img src="https://assets.leetcode-cn.com/lccn-resources/leetcode-200x133.jpg" width="90"/></a>
+  <div id="legal-copyright-info">
+  © 2019 力扣&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://tsm.miit.gov.cn/dxxzsp/" target="_blank">沪B2-20180578</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://www.shjbzx.cn/" target="_blank">上海市互联网违法和不良信息举报中心</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://report.12377.cn:13225/toreportinputNormal_anis.do" target="_blank">中国互联网违法和不良信息举报中心</a>
+  </div>
+  </div>
+  `;
+      document.querySelector(selector).appendChild(newSideElem);
+    }
+  }
+  
+  insertSideBar(".side-bar .problem-category");
+  </script>
+
+  
+  <script>
+  (function(){
+  var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?2dffe68ece6721ae7c687d98926f7c17":"https://jspassport.ssl.qhimg.com/11.0.1.js?2dffe68ece6721ae7c687d98926f7c17";
+  document.write('<script src="' + src + '" id="sozz"><\/script>');
+  })();
+  </script>
+    
+
+    
+      <script type="text/javascript" charset="utf-8" src="//g.alicdn.com/sd/ncpc/nc.js?t=201911221926"></script>
+      <script type="text/javascript" charset="utf-8" src="//g.alicdn.com/sd/nch5/index.js?t=201911221926"></script>
+    
+  </body>
+</html>
