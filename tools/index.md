@@ -74,10 +74,12 @@ readme生成  [readme.so](https://readme.so/)
 
 Play
 
+[GitHub - OpenEthan/SMSBoom: 短信轰炸/短信测压/ | 一个健壮免费的python短信轰炸程序，专门炸坏蛋蛋，百万接口，多线程全自动添加有效接口，支持异步协程百万并发，全免费的短信轰炸工具！！hongkonger开发全网首发！！](https://github.com/OpenEthan/SMSBoom)
 [GitHub - borisdayma/dalle-mini: DALL·E Mini - Generate images from a text prompt](https://github.com/borisdayma/dalle-mini)
-[GitHub - hiroi-sora/Umi-OCR: OCR批量图片转文字识别软件，带界面，离线运行。可排除图片中水印区域的干扰，提取干净的文本。基于 PaddleOCR 。](https://github.com/hiroi-sora/Umi-OCR)
-
+[GitHub - hiroi-sora/Umi-OCR: OCR批量图片转文字识别软件，带界面，离线运行。可排除图片中水印区域的干扰，提取干净的文本。基于 PaddleOCR 。](https://github.com/hiroi-sora/Umi-OCR) 
 国内有位开发者做了一款在线动态表单生成器：Form Create。 -  - 用户只需上传 JSON 数据，即可快速生成表单： -  -  - GitHub：[GitHub - xaboy/form-create: 强大的动态表单生成器|form-create is a form generation component that can generate dynamic rendering, data collection, verification and submission functions through JSON.](https://github.com/xaboy/form-create) -  - 生成的表单，可具备动态
+
+
 
 
 
@@ -151,4 +153,7 @@ ORS 输出的记录分隔符，默认为换行符
 FILENAM 当前输入文件的名字
 
 ```
+### ncdu
+
+ncdu磁盘分析
 
