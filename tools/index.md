@@ -4,13 +4,13 @@ autologin根据用户名, 端口号, telnet协议进行扩展;; linux快速登�
 
 引入优秀linux开源工具 fzf  docker-fzf zsh等等, 通过rpm的方式管理, 不然管不起来  
 
+[GitHub - tldr-pages/tldr: 📚 Collaborative cheatsheets for console commands](https://github.com/tldr-pages/tldr) 里面有中文版本, 自己也维护一版
+https://github.com/cheat/cheat
+
 forgit(fzf) https://github.com/wfxr/forgit  
 https://github.com/so-fancy/diff-so-fancy
 
 正则表达式 https://regex101.com/
-
-rPyc远程调用[11. 使用RPyC远程调用 — python-parallel-programming-cookbook-cn 1.0 文档](https://python-parallel-programmning-cookbook.readthedocs.io/zh_CN/latest/chapter5/11_A_remote_procedure_call_with_RPyC.html)
-
 minio分布式存储http://3ms.huawei.com/km/groups/732/blogs/details/10596443?l=zh-cn
 
 Charles
@@ -79,7 +79,7 @@ readme生成  [readme.so](https://readme.so/)
 
 
 
-Play
+## Play
 
 [GitHub - OpenEthan/SMSBoom: 短信轰炸/短信测压/ | 一个健壮免费的python短信轰炸程序，专门炸坏蛋蛋，百万接口，多线程全自动添加有效接口，支持异步协程百万并发，全免费的短信轰炸工具！！hongkonger开发全网首发！！](https://github.com/OpenEthan/SMSBoom)
 [GitHub - borisdayma/dalle-mini: DALL·E Mini - Generate images from a text prompt](https://github.com/borisdayma/dalle-mini)
@@ -104,7 +104,7 @@ json可视化
 
 
 
-Python与Excel终于互通了!！ https://zhuanlan.zhihu.com/p/468129648
+[Python与Excel终于互通了](https://zhuanlan.zhihu.com/p/468129648)
 docker本地部署，外网镜像
 http://127.0.0.1:8080/
 数据处理， sheet(“A”, in)
@@ -169,3 +169,26 @@ ncdu磁盘分析
 搜索入口聚合searx   搭建很容易 https://www.moerats.com/archives/875/
 
 
+### fanqian
+
+fanqiang [fanqiang/自建V2ray服务器简明教程.md at master · bannedbook/fanqiang](https://github.com/bannedbook/fanqiang/blob/master/v2ss/%E8%87%AA%E5%BB%BAV2ray%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B.md)
+
+
+## Python
+
+rPyc远程调用[11. 使用RPyC远程调用 — python-parallel-programming-cookbook-cn 1.0 文档](https://python-parallel-programmning-cookbook.readthedocs.io/zh_CN/latest/chapter5/11_A_remote_procedure_call_with_RPyC.html)
+
+
+[scrapy爬虫框架](https://docs.scrapy.org/en/latest/intro/install.html)
+
+[GitHub - online-ml/river: 🌊 Online machine learning in Python](https://github.com/online-ml/river)
+
+
+[TODO: impacket有很多报文交互的例子， 比如sniff.py](https://www.secureauth.com/labs/open-source-tools/impacket/)
+
+
+## Kubernetes
+
+TODO: 学习kubernetes常见命令, 以及基本概念
+
+[GitHub - stefanprodan/podinfo: Go microservice template for Kubernetes](https://github.com/stefanprodan/podinfo)

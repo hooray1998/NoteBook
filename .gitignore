@@ -12,3 +12,5 @@ algorithm/AddOil.py
 操作系统/jobs
 操作系统/tt_jobs
 
+*.pyc
+__pycache__
