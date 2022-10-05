@@ -1,5 +1,12 @@
 # index
 
+autologin根据用户名, 端口号, telnet协议进行扩展;; linux快速登录工具， 分享，  直接使用证书登录才是最正确的选择！！！
+
+引入优秀linux开源工具 fzf  docker-fzf zsh等等, 通过rpm的方式管理, 不然管不起来  
+
+forgit(fzf) https://github.com/wfxr/forgit  
+https://github.com/so-fancy/diff-so-fancy
+
 正则表达式 https://regex101.com/
 
 rPyc远程调用[11. 使用RPyC远程调用 — python-parallel-programming-cookbook-cn 1.0 文档](https://python-parallel-programmning-cookbook.readthedocs.io/zh_CN/latest/chapter5/11_A_remote_procedure_call_with_RPyC.html)
@@ -156,4 +163,9 @@ FILENAM 当前输入文件的名字
 ### ncdu
 
 ncdu磁盘分析
+
+
+
+搜索入口聚合searx   搭建很容易 https://www.moerats.com/archives/875/
+
 

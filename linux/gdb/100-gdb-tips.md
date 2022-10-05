@@ -78,6 +78,8 @@ https://www.cnblogs.com/arnoldlu/p/13815087.html
 
 ## 打印
 
+display 表达式：在单步运行时将非常有用，使用display命令设置一个表达式后，它将在每次单步进行指令后，紧接着输出被设置的表达式及值。如： display a
+
 	char str1[] = "abcd";
 	wchar_t str2[] = L"abcd";
 
