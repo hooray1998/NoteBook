@@ -85,7 +85,67 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "第5讲 从物理层到MAC层.md",
+                "file": "第6讲 交换机与VLAN.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "61b1cac2a5c80e00",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "第7讲 ICMP与ping：投石问路的侦察兵.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "3f407f501248c972",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ICMP.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "2c7d4c42280e6a9c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ping.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "314aa3e48234fdb0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ping.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c4bc2e1c5fde87b8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ICMP.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +157,39 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DHCP.md",
+                "file": "traceroute.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c915b90b32c7d9e0",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
+          },
+          {
+            "id": "a208e7bcc64e5f56",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ICMP.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c612485ac603ac2c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ICMP.md",
                 "mode": "source",
                 "source": false
               }
@@ -128,7 +220,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 9
       }
     ],
     "direction": "vertical"
@@ -195,7 +287,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "第5讲 从物理层到MAC层.md",
+                "file": "ping.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -212,7 +304,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "第5讲 从物理层到MAC层.md",
+                "file": "ping.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -235,7 +327,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "第5讲 从物理层到MAC层.md"
+                "file": "ping.md"
               }
             }
           }
@@ -246,17 +338,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "f59330fcf56ef963",
+  "active": "2c7d4c42280e6a9c",
   "lastOpenFiles": [
-    "PXE.md",
+    "ICMP.md",
+    "第7讲 ICMP与ping：投石问路的侦察兵.md",
+    "ping.md",
+    "traceroute.md",
     "DHCP.md",
-    "第4讲 DHCP与PXE： IP是怎么来的？又是怎么没得？.md",
-    "第3讲 ifconfig 熟悉又陌生的命令行.md",
-    "第1讲 为什么要学习网络协议.md",
-    "第2讲 网络分层的真实含义是什么呢？.md",
+    "第6讲 交换机与VLAN.md",
+    "第5讲 从物理层到MAC层.md",
     "趣谈网络协议.md",
-    "通讯协议综述.md",
-    "开篇词.md",
-    "计算机网络/main.md"
+    "PXE.md",
+    "第4讲 DHCP与PXE： IP是怎么来的？又是怎么没得？.md"
   ]
 }
